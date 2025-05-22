@@ -64,7 +64,7 @@ function Hero() {
           <div className="hero-visual">
             <div className="profile-container">
               <div className={`profile-image ${isLoaded ? 'loaded' : ''}`}>
-                <img src="src/assets/profile.jpeg" alt="Michael Odhiambo" />
+                <img src="src/assets/profile.png" alt="Michael Odhiambo" />
               </div>
               <div className="profile-backdrop"></div>
             </div>

@@ -36,7 +36,7 @@ function About() {
         <div className={`about-content ${isVisible ? 'animate' : ''}`}>
           <div className="about-image-container">
             <div className="about-image">
-              <img src="src/assets/profile.jpeg" alt="Profile" />
+              <img src="src/assets/profile.png" alt="Profile" />
             </div>
             <div className="image-backdrop"></div>
             <div className="tech-icons">
