@@ -41,7 +41,6 @@ function Skills() {
 
   return (
     <section id="skills" className="skills section">
-      {/* Add background elements like in About section */}
       <div className="hero-background">
         <div className="tech-circle one"></div>
         <div className="tech-circle two"></div>

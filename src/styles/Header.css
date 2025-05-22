@@ -43,6 +43,7 @@ body.light-mode .header.scrolled {
   margin: 0;
   background: var(--gradient-text);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
 }

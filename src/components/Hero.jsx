@@ -50,7 +50,7 @@ function Hero() {
                 <span>Explore My Work</span>
                 <i className="arrow-icon">→</i>
               </a>
-              <a href="/resume.pdf" className="btn cta-secondary" target="_blank" rel="noopener noreferrer">
+              <a href="#home" className="btn cta-secondary" target="_blank" rel="noopener noreferrer">
                 <span>Resume</span>
                 <i className="download-icon">↓</i>
               </a>
