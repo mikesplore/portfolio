@@ -1,9 +1,28 @@
 import { useState, useEffect } from 'react';
 import '../styles/About.css';
-import profileImage from '../assets/profile.png';
+import carouselImage1 from '../assets/carousel1.jpeg'; 
+import carouselImage2 from '../assets/carousel2.jpeg'; 
+import carouselImage3 from '../assets/carousel3.jpeg'; 
+import carouselImage4 from '../assets/carousel4.jpeg'; 
+import carouselImage5 from '../assets/carousel5.jpeg'; 
+import carouselImage6 from '../assets/carousel6.jpeg'; 
+import carouselImage7 from '../assets/carousel7.jpeg';
+
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const carouselImages = [
+    carouselImage6,
+    carouselImage2,
+    carouselImage3,
+    carouselImage1,
+    carouselImage4,
+    carouselImage5,
+    carouselImage7
+    
+  ];
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -18,6 +37,22 @@ function About() {
     return () => observer.disconnect();
   }, []);
 
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index);
+  };
+  
   return (
     <section id="about" className="about section">
     
@@ -36,8 +71,29 @@ function About() {
         
         <div className={`about-content ${isVisible ? 'animate' : ''}`}>
           <div className="about-image-container">
-            <div className="about-image">
-              <img src={profileImage} alt="Profile" />
+            <div className="about-image carousel-container">
+              <div className="carousel-inner" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+                {carouselImages.map((image, index) => (
+                  <div className="carousel-item" key={index}>
+                    <img src={image} alt={`Profile ${index + 1}`} />
+                  </div>
+                ))}
+              </div>
+              <button className="carousel-control prev" onClick={prevImage}>
+                <span>❮</span>
+              </button>
+              <button className="carousel-control next" onClick={nextImage}>
+                <span>❯</span>
+              </button>
+              <div className="carousel-indicators">
+                {carouselImages.map((_, index) => (
+                  <span 
+                    key={index} 
+                    className={`carousel-dot ${currentImageIndex === index ? 'active' : ''}`} 
+                    onClick={() => goToImage(index)}
+                  ></span>
+                ))}
+              </div>
             </div>
             <div className="image-backdrop"></div>
             <div className="tech-icons">

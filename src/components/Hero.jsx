@@ -50,7 +50,7 @@ function Hero() {
                 <span>Explore My Work</span>
                 <i className="arrow-icon">→</i>
               </a>
-              <a href="#home" className="btn cta-secondary" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/mikesplore" className="btn cta-secondary" target="_blank" rel="noopener noreferrer">
                 <span>Resume</span>
                 <i className="download-icon">↓</i>
               </a>
@@ -75,7 +75,16 @@ function Hero() {
               <div className="tech-element html">HTML</div>
               <div className="tech-element css">CSS</div>
               <div className="tech-element js">JS</div>
-              <div className="tech-element react">SQL</div>
+              <div className="tech-element react">React</div>
+              <div className="tech-element jetpack">Jetpack Compose</div>
+              <div className="tech-element ktor">Ktor</div>
+              <div className="tech-element postgres">PostgreSQL</div>
+              <div className="tech-element exposed">Exposed</div>
+              <div className="tech-element android">Android</div>
+              <div className="tech-element firebase">Firebase</div>
+              
+
+
             
             </div>
           </div>

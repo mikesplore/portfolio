@@ -373,32 +373,82 @@ body.light-mode .tech-element {
 }
 
 .tech-element.html {
-  top: 5%;
-  right: 10%;
+  top: 8%;
+  right: 15%;
   color: #e34c26;
   animation-delay: 1.4s, 3s;
 }
 
 .tech-element.css {
-  bottom: 15%;
-  right: 5%;
+  bottom: 18%;
+  right: 12%;
   color: #264de4;
   animation-delay: 1.6s, 4s;
 }
 
 .tech-element.js {
-  bottom: 5%;
-  left: 15%;
+  bottom: 12%;
+  left: 18%;
   color: #f0db4f;
   animation-delay: 1.8s, 5s;
 }
 
 .tech-element.react {
-  top: 20%;
-  left: 5%;
+  top: 15%;
+  left: 8%;
   color: #61dafb;
   animation-delay: 2s, 6s;
 }
+
+.tech-element.jetpack {
+  top: 25%;
+  right: 8%;
+  color: #8cc84b;
+  animation-delay: 2.2s, 7s;
+}
+
+.tech-element.kotlin {
+  bottom: 25%;
+  left: 5%;
+  color: #6db33f;
+  animation-delay: 2.4s, 8s;
+}
+
+.tech-element.ktor {
+  bottom: 35%;
+  right: 15%;
+  color: #3776ab;
+  animation-delay: 2.4s, 8s;
+}
+
+.tech-element.exposed {
+  top: 20%;
+  left: 20%;
+  color: #007396;
+  animation-delay: 2.6s, 9s;
+}
+
+.tech-element.android {
+  bottom: 5%;
+  right: 20%;
+  color: #6db33f;
+  animation-delay: 2.8s, 10s;
+}
+
+.tech-element.firebase {
+  top: 45%;
+  left: 10%;
+  color: #7f52ff;
+  animation-delay: 3s, 11s;
+}
+
+.tech-element.postgres {
+  bottom: 30%;
+  right: 5%;
+  color: #336791;
+  animation-delay: 3.2s, 12s;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
