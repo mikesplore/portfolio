@@ -96,6 +96,7 @@
 .contact .container {
   position: relative;
   z-index: 10;
+  border-radius: var(--border-radius);
 }
 
 /* Section header animations */

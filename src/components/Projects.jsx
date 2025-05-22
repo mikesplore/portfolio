@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import '../styles/Projects.css';
 import timetableImage from '../assets/timetable.png';
+import uniConnectImage from '../assets/uniconnect.jpeg';
+import pcBuddyImage from '../assets/pcbuddy.jpeg';
+import studVerifyImage from '../assets/studverify.jpeg';
 
 function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +36,7 @@ function Projects() {
       title: "StudVerify",
       description: "An app that allows examiners to verify student information and fee balances using QR codes.",
       technologies: ["Jetpack Compose", "Firebase", "Material-UI"],
-      image: timetableImage,
+      image: studVerifyImage,
       liveLink: "https://github.com/mikesplore",
       githubLink: "https://github.com/mikesplore"
     },
@@ -42,7 +45,7 @@ function Projects() {
       title: "PC Buddy",
       description: "An Android app that display PC specifications and allows users to compare different models.",
       technologies: ["Jetpack Compose", "Ktor", "OSHI"],
-      image: timetableImage,
+      image: pcBuddyImage,
       liveLink: "https://github.com/mikesplore",
       githubLink: "https://github.com/mikesplore"
     },
@@ -51,7 +54,7 @@ function Projects() {
       title: "Uni Connect",
       description: "An Android app that allows students to connect with each other and share resources.",
       technologies: ["Jetpack Compose", "Firebase"],
-      image: timetableImage,
+      image: uniConnectImage,
       liveLink: "https://github.com/mikesplore",
       githubLink: "https://github.com/mikesplore"
     },

@@ -3,6 +3,7 @@
   position: relative;
   background-color: var(--background-color);
   overflow: hidden;
+  
 }
 
 /* Background elements */
@@ -42,6 +43,7 @@
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+  
 }
 
 .education .tech-circle {
@@ -89,11 +91,13 @@
     linear-gradient(90deg, var(--overlay-color) 1px, transparent 1px);
   background-size: 20px 20px;
   z-index: 1;
+  
 }
 
 .education .container {
   position: relative;
   z-index: 10;
+  border-radius: var(--border-radius);
 }
 
 .education .section-title {
