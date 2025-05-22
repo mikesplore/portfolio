@@ -1,0 +1,316 @@
+/* Projects Section with modern styling */
+.projects {
+  position: relative;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+/* Modern background elements - using similar styling as Hero background elements */
+.projects::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  bottom: -200px;
+  right: -200px;
+  filter: blur(var(--blur-effect));
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--gradient-secondary);
+  top: 10%;
+  left: -100px;
+  filter: blur(var(--blur-effect));
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Add background elements like in About section */
+.projects .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.projects .tech-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  filter: blur(var(--blur-effect));
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.projects .tech-circle.one {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+}
+
+.projects .tech-circle.two {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  background: var(--gradient-secondary);
+}
+
+.projects .tech-circle.three {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--gradient-primary);
+}
+
+/* Add grid overlay like in About section */
+.projects .grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(var(--overlay-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--overlay-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+}
+
+.projects .container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Section header animations */
+.projects .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.projects .section-header.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4a6cf7, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.projects .title-underline {
+  height: 4px;
+  width: 80px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #4a6cf7, #a855f7);
+  border-radius: 2px;
+}
+
+/* Project grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.projects-grid.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project card styling */
+.project-card {
+  background-color: var(--card-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-light);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(74, 108, 247, 0.1);
+}
+
+.project-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.project-card:hover .project-image::before {
+  opacity: 1;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  position: relative;
+  display: inline-block;
+}
+
+.project-info h3::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a6cf7, #a855f7);
+  bottom: -6px;
+  left: 0;
+  border-radius: 3px;
+}
+
+.project-info p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Project technologies */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+  margin-top: auto;
+}
+
+.project-tech .tech-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(74, 108, 247, 0.1);
+  color: #4a6cf7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.project-tech .tech-tag:hover {
+  background: rgba(74, 108, 247, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Project links */
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.project-links a:first-child {
+  background: linear-gradient(90deg, #4a6cf7, #6a3de8);
+  color: #fff;
+}
+
+.project-links a:last-child {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+}
+
+body.light-mode .project-links a:last-child {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
