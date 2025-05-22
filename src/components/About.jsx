@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/About.css';
+import profileImage from '../assets/profile.png';
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,7 @@ function About() {
         <div className={`about-content ${isVisible ? 'animate' : ''}`}>
           <div className="about-image-container">
             <div className="about-image">
-              <img src="src/assets/profile.png" alt="Profile" />
+              <img src={profileImage} alt="Profile" />
             </div>
             <div className="image-backdrop"></div>
             <div className="tech-icons">

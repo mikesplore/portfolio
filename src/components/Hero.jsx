@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../styles/Hero.css';
+import profileImage from '../assets/profile.png';
 
 function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -64,7 +65,7 @@ function Hero() {
           <div className="hero-visual">
             <div className="profile-container">
               <div className={`profile-image ${isLoaded ? 'loaded' : ''}`}>
-                <img src="src/assets/profile.png" alt="Michael Odhiambo" />
+                <img src={profileImage} alt="Michael Odhiambo" />
               </div>
               <div className="profile-backdrop"></div>
             </div>
