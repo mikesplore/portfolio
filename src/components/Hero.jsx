@@ -55,7 +55,7 @@ function Hero() {
                 <i className="download-icon">↓</i>
               </a>
             </div>
-            
+      
             <div className="hero-scroll-indicator">
               <span>Scroll Down</span>
               <div className="scroll-arrow"></div>
