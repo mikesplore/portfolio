@@ -74,4 +74,4 @@ The free plan includes:
 - 2 email templates
 - 1 email service
 
-If you need more, consider upgrading to a paid plan.
+If you need more, consider upgrading to a 
