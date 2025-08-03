@@ -1,0 +1,21 @@
+Thank you for your message
+
+Hi {{from_name}},
+
+Thank you for contacting me through my portfolio website! I've received your message and I appreciate you taking the time to reach out.
+
+Your message:
+"{{message}}"
+
+I'll review your message carefully and respond as soon as possible, typically within 24-48 hours.
+
+If your matter is urgent, feel free to reach me directly at +254799013845.
+
+Best regards,
+Mike
+Full-Stack Developer
+
+---
+GitHub: https://github.com/mikesplore
+Twitter: https://twitter.com/mikesplore
+LinkedIn: https://linkedin.com/in/mikesplore

@@ -52,6 +52,13 @@ function Education() {
     degree: "Android Development with Kotlin",
     duration: "2022",
     description: "Focused on building modern Android apps using Jetpack Compose, Room database, MVVM architecture, and Firebase integration. Learned via <a href='https://www.youtube.com/@PhilippLackner' target='_blank' rel='noopener noreferrer'>Philipp Lackner's YouTube Channel</a>."
+  },
+  {
+    id: 6,
+    institution: "Swahilipot Hub",
+    degree: "Internship Position",
+    duration: "May – August 2025",
+    description: "Interned at Swahilipot Hub, where I learned project management skills, backend development, and effective team collaboration."
   }
 ];
 

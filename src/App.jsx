@@ -1,28 +1,24 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
 
-// Import components for each section
+// Import components
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './components/Home';
+import ProjectDetail from './components/ProjectDetail';
 
 function App() {
   return (
-    <div className="portfolio">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
-      <Footer />
-    </div>
+    <Router basename="/portfolio">
+      <div className="portfolio">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:slug" element={<ProjectDetail />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
