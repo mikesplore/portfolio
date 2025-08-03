@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank you for your message</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a18;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .header {
+      background: linear-gradient(90deg, #4a6cf7, #a855f7);
+      padding: 30px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      top: -50px;
+      right: -50px;
+      filter: blur(60px);
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      bottom: -30px;
+      left: -30px;
+      filter: blur(40px);
+    }
+    .header img {
+      height: 50px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    .header h1 {
+      color: white;
+      margin: 0;
+      font-weight: 600;
+      font-size: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .content {
+      padding: 40px;
+      background-color: rgba(10, 10, 24, 0.8);
+    }
+    .greeting {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+    .message {
+      margin-bottom: 30px;
+      color: #a0a0b0;
+    }
+    .quote {
+      background-color: rgba(74, 108, 247, 0.1);
+      border-left: 4px solid #4a6cf7;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      color: #ffffff;
+      font-style: italic;
+    }
+    .footer {
+      padding: 20px 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+      background-color: rgba(10, 10, 24, 0.9);
+    }
+    .social-links {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 16px;
+      color: #4a6cf7;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+    }
+    .signature {
+      margin-top: 25px;
+      font-weight: 600;
+    }
+    .signature-name {
+      color: #4a6cf7;
+      font-size: 18px;
+    }
+    .signature-title {
+      color: #a0a0b0;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .grid-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <div class="grid-overlay"></div>
+      <!-- Replace with your actual logo URL in EmailJS -->
+      <img src="https://your-website.com/logo.png" alt="Mike's Portfolio" />
+      <h1>Thank You For Reaching Out</h1>
+    </div>
+    <div class="content">
+      <p class="greeting">Hi {{from_name}},</p>
+      
+      <div class="message">
+        <p>Thank you for contacting me through my portfolio website! I've received your message and I appreciate you taking the time to reach out.</p>
+        
+        <div class="quote">
+          "{{message}}"
+        </div>
+        
+        <p>I'll review your message carefully and respond as soon as possible, typically within 24-48 hours.</p>
+        
+        <p>If your matter is urgent, feel free to reach me directly at <a href="tel:+254799013845" style="color: #4a6cf7; text-decoration: none; font-weight: 500;">+254 799013845</a>.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="signature">
+        <p class="signature-name">Mike</p>
+        <p class="signature-title">Full-Stack Developer</p>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/mikesplore" target="_blank">GitHub</a>
+        <a href="https://twitter.com/mikesplore" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/mikesplore" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

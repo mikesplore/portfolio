@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
-import timetableImage from '../assets/timetable.png';
-import uniConnectImage from '../assets/uniconnect.jpeg';
-import pcBuddyImage from '../assets/pcbuddy.jpeg';
-import studVerifyImage from '../assets/studverify.jpeg';
+import { projectsData } from '../data/projectsData';
 
 function Projects() {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -16,51 +16,30 @@ function Projects() {
       }
     }, { threshold: 0.3 });
 
-    observer.observe(document.querySelector('#projects'));
+    const projectsElement = document.querySelector('#projects');
+    if (projectsElement) {
+      observer.observe(projectsElement);
+    }
 
     return () => observer.disconnect();
   }, []);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Timetabling System",
-      description: "A web application for creating and managing University timetables.",
-      technologies: ["React", "PostgreSQL", "Ktor"],
-      image: timetableImage, 
-      liveLink: "https://github.com/mikesplore",
-      githubLink: "https://github.com/mikesplore"
-    },
-    {
-      id: 2,
-      title: "StudVerify",
-      description: "An app that allows examiners to verify student information and fee balances using QR codes.",
-      technologies: ["Jetpack Compose", "Firebase", "Material-UI"],
-      image: studVerifyImage,
-      liveLink: "https://github.com/mikesplore",
-      githubLink: "https://github.com/mikesplore"
-    },
-    {
-      id: 3,
-      title: "PC Buddy",
-      description: "An Android app that display PC specifications and allows users to compare different models.",
-      technologies: ["Jetpack Compose", "Ktor", "OSHI"],
-      image: pcBuddyImage,
-      liveLink: "https://github.com/mikesplore",
-      githubLink: "https://github.com/mikesplore"
-    },
-    {
-      id: 4,
-      title: "Uni Connect",
-      description: "An Android app that allows students to connect with each other and share resources.",
-      technologies: ["Jetpack Compose", "Firebase"],
-      image: uniConnectImage,
-      liveLink: "https://github.com/mikesplore",
-      githubLink: "https://github.com/mikesplore"
-    },
-    
+  const categories = {
+    all: 'All Projects',
+    'mobile-apps': 'Mobile Apps',
+    'fullstack': 'Full-Stack Web Apps'
+  };
 
-  ];
+  const getFilteredProjects = () => {
+    if (activeCategory === 'all') {
+      return Object.values(projectsData).flat();
+    }
+    return projectsData[activeCategory] || [];
+  };
+
+  const handleProjectClick = (slug) => {
+    navigate(`/project/${slug}`);
+  };
 
   return (
     <section id="projects" className="projects section">
@@ -75,25 +54,47 @@ function Projects() {
         <div className={`section-header ${isVisible ? 'animate' : ''}`}>
           <h2 className="section-title">Projects</h2>
           <div className="title-underline"></div>
+          <p className="section-subtitle">Explore my work across different technologies and platforms</p>
+        </div>
+
+        {/* Category Filter */}
+        <div className={`category-filter ${isVisible ? 'animate' : ''}`}>
+          {Object.entries(categories).map(([key, label]) => (
+            <button
+              key={key}
+              className={`filter-btn ${activeCategory === key ? 'active' : ''}`}
+              onClick={() => setActiveCategory(key)}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         <div className={`projects-grid ${isVisible ? 'animate' : ''}`}>
-          {projects.map((project) => (
+          {getFilteredProjects().map((project) => (
             <div className="project-card" key={project.id}>
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
               </div>
               <div className="project-info">
+                <div className="project-category-badge">{project.category.replace('-', ' ')}</div>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p>{project.shortDescription}</p>
                 <div className="project-tech">
-                  {project.technologies.map((tech, index) => (
+                  {project.technologies.slice(0, 3).map((tech, index) => (
                     <span className="tech-tag" key={index}>{tech}</span>
                   ))}
+                  {project.technologies.length > 3 && (
+                    <span className="tech-tag more">+{project.technologies.length - 3}</span>
+                  )}
                 </div>
                 <div className="project-links">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn small">Live Demo</a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn small secondary">GitHub</a>
+                  <button 
+                    className="btn small primary"
+                    onClick={() => handleProjectClick(project.slug)}
+                  >
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>

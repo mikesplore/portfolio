@@ -1,8 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { emailJsConfig } from '../utils/emailConfig';
+import Notification from './Notification';
 import '../styles/Contact.css';
 
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
+  const formRef = useRef();
+  const [notification, setNotification] = useState({
+    visible: false,
+    message: '',
+    type: 'info'
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -12,7 +21,10 @@ function Contact() {
       }
     }, { threshold: 0.3 });
 
-    observer.observe(document.querySelector('#contact'));
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      observer.observe(contactSection);
+    }
 
     return () => observer.disconnect();
   }, []);
@@ -59,6 +71,12 @@ function Contact() {
         error: true,
         message: 'Please enter a valid email address.'
       });
+      
+      setNotification({
+        visible: true,
+        message: 'Please enter a valid email address.',
+        type: 'error'
+      });
       return;
     }
     
@@ -71,29 +89,93 @@ function Contact() {
     });
     
     try {
-      // Simulate API call with timeout
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Random success (90%) or failure (10%) to simulate real-world scenarios
-      const isSuccess = Math.random() > 0.1;
-      
-      if (isSuccess) {
+      // Check if EmailJS is properly configured
+      if (emailJsConfig.serviceId === 'your_service_id' || 
+          emailJsConfig.templateId === 'your_template_id' || 
+          emailJsConfig.publicKey === 'your_public_key') {
+        
+        // If not configured, show instructions
+        console.warn('EmailJS not configured. Please set up your email configuration in /src/utils/emailConfig.js');
+        
+        // Simulate successful send for development purposes
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
         setFormStatus({
           submitted: true,
           sending: false,
           error: false,
-          message: 'Thank you for your message! I\'ll get back to you soon.'
+          message: 'Message sent successfully (simulated).'
         });
+        
+        setNotification({
+          visible: true,
+          message: 'Email sent successfully (simulated). Please configure EmailJS for real email sending.',
+          type: 'info'
+        });
+        
         setFormData({ name: '', email: '', message: '' });
-      } else {
-        throw new Error('Network error');
+        return;
       }
+      
+      // Send email notification to you
+      const result = await emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        formRef.current,
+        emailJsConfig.publicKey
+      );
+      
+      console.log('Email sent successfully:', result.text);
+      
+      // Send an auto-response if template is configured
+      if (emailJsConfig.autoResponseTemplateId && emailJsConfig.autoResponseTemplateId !== 'template_autoresponse') {
+        try {
+          // Send an auto-response to the person who contacted you
+          await emailjs.send(
+            emailJsConfig.serviceId,
+            emailJsConfig.autoResponseTemplateId,
+            {
+              to_email: formData.email,
+              from_name: formData.name,
+              message: formData.message,
+              reply_to: "mikepremium8@gmail.com" // Your email for them to reply to
+            },
+            emailJsConfig.publicKey
+          );
+          console.log("Auto-response sent successfully");
+        } catch (autoResponseError) {
+          console.error("Error sending auto-response:", autoResponseError);
+          // We don't show this error to the user since the main email was sent successfully
+        }
+      }
+      
+      setFormStatus({
+        submitted: true,
+        sending: false,
+        error: false,
+        message: 'Thank you for your message! I\'ll get back to you soon.'
+      });
+      
+      setNotification({
+        visible: true,
+        message: 'Thank you for your message! I\'ll get back to you soon.',
+        type: 'success'
+      });
+      
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Email send error:', error);
       setFormStatus({
         submitted: true,
         sending: false,
         error: true,
         message: 'Something went wrong. Please try again or contact me directly via email.'
+      });
+      
+      setNotification({
+        visible: true,
+        message: 'Something went wrong. Please try again or contact me directly via email.',
+        type: 'error'
       });
     }
   };
@@ -105,10 +187,33 @@ function Contact() {
       error: false,
       message: ''
     });
+    
+    // Also close any notification
+    setNotification({
+      ...notification,
+      visible: false
+    });
+  };
+
+  // Close notification
+  const closeNotification = () => {
+    setNotification({
+      ...notification,
+      visible: false
+    });
   };
 
   return (
     <section id="contact" className="contact section">
+      {notification.visible && (
+        <Notification 
+          message={notification.message}
+          type={notification.type}
+          duration={5000}
+          onClose={closeNotification}
+        />
+      )}
+      
       <div className="hero-background">
         <div className="tech-circle one"></div>
         <div className="tech-circle two"></div>
@@ -184,7 +289,7 @@ function Contact() {
                 </button>
               </div>
             ) : (
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
                 {formStatus.sending && (
                   <div className="form-loading">
                     <div className="loading-spinner"></div>
@@ -236,6 +341,10 @@ function Contact() {
                     required
                   ></textarea>
                 </div>
+                
+                {/* Hidden fields for additional email template data */}
+                <input type="hidden" name="to_name" value="Mike" />
+                <input type="hidden" name="from_name" value={formData.name} />
                 
                 <button 
                   type="submit" 
