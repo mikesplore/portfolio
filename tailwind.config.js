@@ -10,8 +10,8 @@ export default {
         black: '#000000',
       },
       fontFamily: {
-        sans: ['Caveat', 'cursive', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-        caveat: ['Caveat', 'cursive'],
+        sans: ['Turret Road', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        turret: ['Turret Road', 'system-ui'],
       },
     },
   },
