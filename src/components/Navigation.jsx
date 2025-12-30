@@ -74,7 +74,9 @@ const Navigation = ({ isScrolled }) => {
               ))}
             </div>
             <a
-              href="#contact"
+              href="https://wa.me/254799013845"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-black transition-all text-sm uppercase tracking-wider"
             >
               Contact
