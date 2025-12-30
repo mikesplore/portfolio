@@ -1,0 +1,278 @@
+import React, { useState, useEffect } from 'react';
+import { Github, Twitter, Mail, ExternalLink, Code, Smartphone, Globe, Award, BookOpen, ChevronDown } from 'lucide-react';
+
+const Portfolio = () => {
+  const [activeSection, setActiveSection] = useState('hero');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const projects = [
+    {
+      title: "StudVerify",
+      category: "Mobile Application",
+      icon: <Smartphone className="w-6 h-6" />,
+      description: "Comprehensive exam verification system using QR code technology",
+      tech: ["Jetpack Compose", "Firebase", "QR Scanner", "Material UI"],
+      impact: "85% reduction in verification time",
+      link: "https://github.com/mikesplore"
+    },
+    {
+      title: "PC Buddy",
+      category: "Mobile Application",
+      icon: <Smartphone className="w-6 h-6" />,
+      description: "PC specification viewer and comparison tool for Android",
+      tech: ["Jetpack Compose", "Ktor", "OSHI Library", "Material Design 3"],
+      impact: "Simplified PC buying decisions",
+      link: "https://github.com/mikesplore"
+    },
+    {
+      title: "Timetabling System",
+      category: "Full Stack",
+      icon: <Globe className="w-6 h-6" />,
+      description: "Intelligent web app for university course scheduling",
+      tech: ["React", "PostgreSQL", "Ktor", "WebSocket"],
+      impact: "70% reduction in schedule creation time",
+      link: "https://github.com/mikesplore"
+    },
+    {
+      title: "Tuya Billing System",
+      category: "Full Stack",
+      icon: <Globe className="w-6 h-6" />,
+      description: "Comprehensive billing system with M-Pesa integration",
+      tech: ["React", "Node.js", "MongoDB", "M-Pesa API"],
+      impact: "90% faster payment processing",
+      link: "https://github.com/mikesplore"
+    },
+    {
+      title: "Smart Space",
+      category: "Full Stack",
+      icon: <Globe className="w-6 h-6" />,
+      description: "Event venue management and booking platform",
+      tech: ["React", "Firebase", "Stripe", "Google Calendar"],
+      impact: "Booking time reduced from hours to minutes",
+      link: "https://github.com/mikesplore"
+    },
+    {
+      title: "Uni Connect",
+      category: "Mobile Application",
+      icon: <Smartphone className="w-6 h-6" />,
+      description: "Social networking platform for university students",
+      tech: ["Jetpack Compose", "Firebase", "Cloud Firestore"],
+      impact: "Enhanced student collaboration",
+      link: "https://github.com/mikesplore"
+    }
+  ];
+
+  const skills = [
+    { name: "Ktor", level: 75 },
+    { name: "Jetpack Compose", level: 65 },
+    { name: "Kotlin", level: 60 },
+    { name: "Firebase", level: 50 },
+    { name: "React", level: 40 },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Navigation */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold tracking-tight">MO</div>
+          <div className="flex gap-8 items-center">
+            <a href="#about" className="hover:text-gray-400 transition-colors text-sm uppercase tracking-wider">About</a>
+            <a href="#projects" className="hover:text-gray-400 transition-colors text-sm uppercase tracking-wider">Projects</a>
+            <a href="#skills" className="hover:text-gray-400 transition-colors text-sm uppercase tracking-wider">Skills</a>
+            <a href="#contact" className="px-6 py-2 border border-white hover:bg-white hover:text-black transition-all text-sm uppercase tracking-wider">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center px-6 relative">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-6 text-sm uppercase tracking-widest text-gray-400">Full Stack Developer</div>
+          <h1 className="text-7xl md:text-9xl font-bold mb-6 tracking-tighter">
+            Michael<br/>Odhiambo
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Building scalable applications across mobile and web platforms with a focus on real-world impact
+          </p>
+          <div className="flex gap-6 justify-center items-center">
+            <a href="https://github.com/mikesplore" target="_blank" rel="noopener noreferrer" 
+               className="p-3 border border-white/20 hover:border-white hover:bg-white/5 transition-all rounded-full">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://twitter.com/mikesplore" target="_blank" rel="noopener noreferrer"
+               className="p-3 border border-white/20 hover:border-white hover:bg-white/5 transition-all rounded-full">
+              <Twitter className="w-6 h-6" />
+            </a>
+            <a href="#contact"
+               className="p-3 border border-white/20 hover:border-white hover:bg-white/5 transition-all rounded-full">
+              <Mail className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-gray-600" />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-32 px-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-5xl font-bold mb-8 tracking-tight">About Me</h2>
+              <div className="space-y-6 text-gray-400 leading-relaxed">
+                <p>
+                  I'm a full-stack developer specializing in Android development with Kotlin and Jetpack Compose, 
+                  alongside modern web technologies. Currently pursuing BSc. Computer Science at Technical University of Mombasa.
+                </p>
+                <p>
+                  My work focuses on building structured, efficient applications that provide real value—from educational 
+                  tools to business solutions. I believe in clean architecture, scalable systems, and continuous learning.
+                </p>
+                <p>
+                  With expertise spanning mobile apps, backend systems, and frontend development, I create end-to-end 
+                  solutions that solve real problems.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-6 tracking-tight">Achievements</h3>
+              <div className="space-y-6">
+                <div className="border-l-2 border-white pl-6">
+                  <div className="text-4xl font-bold mb-2">85%</div>
+                  <div className="text-gray-400">Reduction in verification time with StudVerify</div>
+                </div>
+                <div className="border-l-2 border-white pl-6">
+                  <div className="text-4xl font-bold mb-2">70%</div>
+                  <div className="text-gray-400">Faster timetable creation in scheduling system</div>
+                </div>
+                <div className="border-l-2 border-white pl-6">
+                  <div className="text-4xl font-bold mb-2">90%</div>
+                  <div className="text-gray-400">Reduction in payment processing time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-32 px-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-bold mb-16 tracking-tight">Selected Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, idx) => (
+              <div key={idx} 
+                   className="group border border-white/10 p-8 hover:border-white/30 transition-all duration-300 hover:bg-white/5">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-3 border border-white/20 group-hover:border-white transition-colors">
+                    {project.icon}
+                  </div>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer"
+                     className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+                <div className="text-xs uppercase tracking-wider text-gray-500 mb-3">{project.category}</div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight">{project.title}</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.slice(0, 3).map((tech, i) => (
+                    <span key={i} className="text-xs px-3 py-1 border border-white/20 text-gray-400">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="text-sm font-medium border-t border-white/10 pt-4">
+                  {project.impact}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-32 px-6 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-bold mb-16 tracking-tight">Technical Expertise</h2>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-2xl font-bold mb-8 tracking-tight">Core Skills</h3>
+              <div className="space-y-6">
+                {skills.map((skill, idx) => (
+                  <div key={idx}>
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-gray-400">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-white/10">
+                      <div 
+                        className="h-full bg-white transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-8 tracking-tight">Tech Stack</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {["Android Development", "Backend (Ktor)", "React & Web", "Firebase", "PostgreSQL", "Payment Systems", "Real-time Systems", "RESTful APIs"].map((tech, idx) => (
+                  <div key={idx} className="border border-white/10 p-4 hover:border-white/30 transition-colors">
+                    <Code className="w-5 h-5 mb-2 text-gray-400" />
+                    <div className="text-sm font-medium">{tech}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-32 px-6 border-t border-white/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl font-bold mb-8 tracking-tight">Let's Build Something</h2>
+          <p className="text-xl text-gray-400 mb-12 leading-relaxed">
+            I'm always interested in new opportunities, collaborations, or just a good conversation about technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:contact@example.com" 
+               className="px-8 py-4 bg-white text-black hover:bg-gray-200 transition-all font-medium tracking-wide uppercase text-sm">
+              Get in Touch
+            </a>
+            <a href="https://github.com/mikesplore" target="_blank" rel="noopener noreferrer"
+               className="px-8 py-4 border border-white hover:bg-white hover:text-black transition-all font-medium tracking-wide uppercase text-sm">
+              View GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+          <div>© 2025 Michael Odhiambo. All rights reserved.</div>
+          <div className="flex gap-6">
+            <a href="https://github.com/mikesplore" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://twitter.com/mikesplore" className="hover:text-white transition-colors">Twitter</a>
+            <a href="#contact" className="hover:text-white transition-colors">Email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
