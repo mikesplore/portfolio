@@ -1,70 +1,102 @@
 export const projects = [
   {
-    title: "StudVerify",
-    category: "Mobile Application",
-    type: "mobile",
-    description: "Comprehensive exam verification system using QR code technology",
-    tech: ["Jetpack Compose", "Firebase", "QR Scanner", "Material UI"],
-    impact: "85% reduction in verification time",
-    link: "https://github.com/mikesplore"
-  },
-  {
-    title: "PC Buddy",
-    category: "Mobile Application",
-    type: "mobile",
-    description: "PC specification viewer and comparison tool for Android",
-    tech: ["Jetpack Compose", "Ktor", "OSHI Library", "Material Design 3"],
-    impact: "Simplified PC buying decisions",
-    link: "https://github.com/mikesplore"
-  },
-  {
     title: "Timetabling System",
-    category: "Full Stack",
+    category: "Core System",
     type: "fullstack",
-    description: "Intelligent web app for university course scheduling",
-    tech: ["React", "PostgreSQL", "Ktor", "WebSocket"],
+    description:
+      "Intelligent university course scheduling platform with real-time updates and strict constraint enforcement.",
+    tech: ["Ktor", "PostgreSQL", "React", "WebSockets"],
     impact: "70% reduction in schedule creation time",
     link: "https://github.com/mikesplore"
   },
   {
-    title: "Tuya Billing System",
-    category: "Full Stack",
+    title: "Scheduling & Constraints Engine",
+    category: "Core System",
+    type: "backend",
+    description:
+      "Rule-based backend engine enforcing lecturer, room, and time constraints with transactional consistency across many-to-many relationships.",
+    tech: ["Ktor", "PostgreSQL", "Constraint Logic", "Transactions"],
+    impact:
+      "Handled complex scheduling constraints with consistent state updates",
+    link: "https://github.com/mikesplore"
+  },
+  {
+    title: "QuizBaze",
+    category: "AI System",
+    type: "backend",
+    description:
+      "Retrieval-locked Quizlet assistant that searches flashcards and returns exact answers with zero hallucination.",
+    tech: ["Vector Search", "Controlled Retrieval", "RAG", "Backend APIs"],
+    impact:
+      "Accurate, hallucination-free answers through strict retrieval boundaries",
+    link: "https://github.com/mikesplore"
+  },
+  {
+    title: "Style AI Studio",
+    category: "Applied AI",
+    type: "web",
+    description:
+      "Generative AI platform for visualizing, organizing, and managing fashion concepts and collections.",
+    tech: ["Generative AI", "Web Application", "Design Systems"],
+    impact:
+      "Transformed fashion ideation into an interactive, AI-driven workflow",
+    link: "https://github.com/mikesplore"
+  },
+  {
+    title: "StoryLoom",
+    category: "Applied AI",
     type: "fullstack",
-    description: "Comprehensive billing system with M-Pesa integration",
+    description:
+      "AI-powered story generator, translator, reader, and quiz engine with multilingual support.",
+    tech: ["Generative AI", "NLP", "Multilingual Processing"],
+    impact:
+      "Enabled interactive storytelling and comprehension through AI-driven quizzes",
+    link: "https://github.com/mikesplore"
+  },
+  {
+    title: "Tuya Billing System",
+    category: "Supporting System",
+    type: "fullstack",
+    description:
+      "End-to-end billing platform with secure M-Pesa STK Push integration and transaction tracking.",
     tech: ["React", "Node.js", "MongoDB", "M-Pesa API"],
     impact: "90% faster payment processing",
     link: "https://github.com/mikesplore"
   },
   {
-    title: "Smart Space",
-    category: "Full Stack",
-    type: "fullstack",
-    description: "Event venue management and booking platform",
-    tech: ["React", "Firebase", "Stripe", "Google Calendar"],
-    impact: "Booking time reduced from hours to minutes",
-    link: "https://github.com/mikesplore"
-  },
-  {
-    title: "Uni Connect",
-    category: "Mobile Application",
+    title: "StudVerify",
+    category: "Supporting System",
     type: "mobile",
-    description: "Social networking platform for university students",
-    tech: ["Jetpack Compose", "Firebase", "Cloud Firestore"],
-    impact: "Enhanced student collaboration",
+    description:
+      "QR-based exam verification system designed to reduce fraud and speed up verification processes.",
+    tech: ["Jetpack Compose", "Firebase", "QR Scanning"],
+    impact: "85% reduction in verification time",
     link: "https://github.com/mikesplore"
   },
-
   {
-  title: "Scheduling & Constraints Engine",
-  category: "Backend System",
-  type: "backend",
-  description: "Rule-based scheduling engine handling lecturer, room, and time constraints",
-  tech: ["Ktor", "PostgreSQL", "Constraint Logic", "Transactions"],
-  impact: "Handled complex many-to-many constraints with consistent state updates",
-  link: "https://github.com/mikesplore"
-}
-
+    title: "GitHub Wrapped",
+    category: "Creative / Experimental",
+    type: "ai",
+    description:
+      "AI-powered roast and recap of a developer’s GitHub year, blending analytics with humor.",
+    tech: ["AI Analysis", "Data Visualization", "LLMs"],
+    impact:
+      "Increased engagement through personalized, shareable developer insights",
+    link: "https://github.com/mikesplore"
+  },
+  {
+    title: "Eeh Sawa",
+    category: "Creative / Experimental",
+    type: "ai",
+    description:
+      "Sarcastic multilingual AI assistant built to generate witty, context-aware responses.",
+    tech: ["LLMs", "Multilingual NLP", "Web Interfaces"],
+    impact:
+      "Delivered personality-driven interactions across multiple languages",
+    link: "https://github.com/mikesplore"
+  }
 ];
+
 
 export const skills = [
   { name: "Ktor", level: 85 },
