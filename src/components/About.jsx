@@ -1,4 +1,4 @@
-import { achievements, recognition } from '../data/portfolio';
+import { achievements, recognition, interests } from '../data/portfolio';
 
 const About = () => {
   return (
@@ -20,6 +20,19 @@ const About = () => {
                 With expertise spanning mobile apps, backend systems, and frontend development, I create end-to-end 
                 solutions that solve real problems.
               </p>
+              
+              {/* Currently Interested In */}
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <p className="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-4">{interests.title}</p>
+                <ul className="space-y-3">
+                  {interests.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-gray-300">
+                      <span className="text-white/50 mt-1">→</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           <div>

@@ -34,8 +34,11 @@ const Hero = () => {
             <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tighter text-gray-100">
               Michael<br />Odhiambo
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Building scalable applications across mobile and web platforms with a focus on real-world impact
+            <p className="text-lg md:text-xl text-white mb-2 font-medium leading-relaxed">
+              Backend-first systems engineer building constraint-aware and AI-assisted products.
+            </p>
+            <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
+              Kotlin backend, real-time systems, and production-grade architectures.
             </p>
             <div className="flex gap-6 items-center">
               {socialLinks.map((link, idx) => {
@@ -83,8 +86,8 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-gray-600" />
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-60 transition-opacity">
+        <ChevronDown className="w-8 h-8 text-gray-600 animate-pulse" />
       </div>
     </section>
   );
