@@ -33,6 +33,21 @@ const About = () => {
                   ))}
                 </ul>
               </div>
+
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <h3 className="text-5xl font-bold mb-8 tracking-tight text-gray-100">Recognition</h3>
+                <ul className="space-y-3">
+                  {recognition.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-gray-300">
+                      <span className="text-white/50 mt-1">→</span>
+                      <span>
+                        <span className="text-gray-100">{item.title}</span>
+                        <span className="text-gray-500"> · {item.organization} · {item.year}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           <div>
@@ -42,17 +57,6 @@ const About = () => {
                 <div key={idx} className="border-l-2 border-white pl-6">
                   <div className="text-4xl font-bold mb-2">{achievement.value}</div>
                   <div className="text-gray-400">{achievement.description}</div>
-                </div>
-              ))}
-            </div>
-            
-            <h3 className="text-2xl font-bold mb-6 mt-12 tracking-tight text-gray-200">Recognition</h3>
-            <div className="space-y-4">
-              {recognition.map((item, idx) => (
-                <div key={idx} className="border border-white/10 p-4 hover:border-white/30 transition-colors">
-                  <div className="text-lg font-bold mb-1 text-gray-200">{item.title}</div>
-                  <div className="text-sm text-gray-500 mb-2">{item.organization} • {item.year}</div>
-                  <div className="text-sm text-gray-400">{item.description}</div>
                 </div>
               ))}
             </div>

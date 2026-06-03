@@ -17,7 +17,7 @@ export const projects = [
       "Deterministic constraint solver handling 100+ simultaneous constraints"
     ],
     link: "https://github.com/mikesplore",
-    demoLink: "#",
+    demoLink: "https://mikesplore.tech",
     repoLink: "https://github.com/mikesplore",
     docsLink: "#"
   },
@@ -39,7 +39,7 @@ export const projects = [
       "Hard + soft constraint separation for flexible scheduling"
     ],
     link: "https://github.com/mikesplore",
-    demoLink: "#",
+    demoLink: "https://mikesplore.tech",
     repoLink: "https://github.com/mikesplore",
     docsLink: "#"
   },
@@ -134,6 +134,94 @@ export const projects = [
     docsLink: "#"
   },
   {
+    title: "Uni-Connect",
+    category: "Android App",
+    tier: "secondary",
+    type: "mobile",
+    problem: "Student management often spans several disconnected tools for resources, attendance, and communication.",
+    description:
+      "Android student management app for sharing resources, discussions, attendance tracking, announcements, and course materials.",
+    system:
+      "Kotlin MVVM app built with Jetpack Compose and Firebase Authentication plus Realtime Database for backend services.",
+    tech: ["Kotlin", "MVVM", "Jetpack Compose", "Firebase", "Realtime Database"],
+    impact: "Centralized student engagement and course management in one Android app",
+    highlights: [
+      "Resource sharing and discussion features for collaborative learning",
+      "Attendance tracking and course announcement management",
+      "Firebase-backed authentication and realtime data sync"
+    ],
+    link: "https://github.com/mikesplore/Uni-Connect",
+    demoLink: "#",
+    repoLink: "https://github.com/mikesplore/Uni-Connect",
+    docsLink: "#"
+  },
+  {
+    title: "MyKeja",
+    category: "Android App",
+    tier: "secondary",
+    type: "mobile",
+    problem: "Room management often needs a clean system for tracking property data and availability.",
+    description:
+      "Room management system for Android built with modern Kotlin, combining local persistence and Firebase sync.",
+    system:
+      "MVVM-based Jetpack Compose app using Room for local storage, Firebase for backend integration, and Hilt for dependency injection.",
+    tech: ["Kotlin", "Jetpack Compose", "Room", "Firebase", "Hilt"],
+    impact: "Modern Android room management with offline-first persistence and backend sync",
+    highlights: [
+      "Clean MVVM architecture for maintainable Android development",
+      "Room Database for local property and room data persistence",
+      "Firebase integration for backend synchronization and app services"
+    ],
+    link: "https://github.com/mikesplore/MyKeja",
+    demoLink: "#",
+    repoLink: "https://github.com/mikesplore/MyKeja",
+    docsLink: "#"
+  },
+  {
+    title: "Vela",
+    category: "Flagship Project",
+    tier: "flagship",
+    type: "mobile",
+    problem: "Remote device management tools are complex and require rigid, manual control interfaces.",
+    description:
+      "Cross-platform remote device orchestration system pairing a native Android app with an LLM-powered backend for natural language command execution.",
+    system:
+      "Native Kotlin Android application built with MVVM architecture, interfacing via secure network protocols with a Flask backend and a VPSS relay server. Integrates an LLM with function calling to translate unstructured natural language commands into immediate, precise hardware actions.",
+    tech: ["Kotlin", "Android SDK", "LLM Function Calling", "Flask", "VPSS Relay"],
+    impact: "Zero-parser remote control driven entirely by natural language processing",
+    highlights: [
+      "Native Android (Kotlin) app utilizing clean lifecycle architecture for device monitoring",
+      "LLM function-calling integration removing the need for traditional hardcoded command parsers",
+      "Secure client-to-device communication routed through a custom configured VPSS relay server"
+    ],
+    link: "https://github.com/mikesplore",
+    demoLink: "#",
+    repoLink: "https://github.com/mikesplore/velaclient",
+    docsLink: "#"
+  },
+  {
+    title: "Kipepeo Intelligence",
+    category: "Hackathon Project",
+    tier: "creative",
+    type: "ai",
+    problem: "Lenders need a faster way to assess credit worthiness from real mobile money behavior.",
+    description:
+      "AI system that estimates credit worthiness from M-Pesa statements and credit usage patterns.",
+    system:
+      "Hackathon prototype combining transaction analysis and credit behavior signals to generate a practical risk score from mobile money history.",
+    tech: ["AI Scoring", "M-Pesa Data", "Credit Analysis", "Python", "Analytics"],
+    impact: "Automated credit assessment from M-Pesa and usage data",
+    highlights: [
+      "Credit-worthiness scoring based on mobile money statements",
+      "Behavior-driven analysis for faster lending decisions",
+      "Built as a hackathon prototype for practical financial evaluation"
+    ],
+    link: "https://github.com/mikesplore/Kipepeo-Intelligence",
+    demoLink: "#",
+    repoLink: "https://github.com/mikesplore/Kipepeo-Intelligence",
+    docsLink: "#"
+  },
+  {
     title: "GitHub Wrapped",
     category: "Creative / Experimental",
     tier: "creative",
@@ -147,7 +235,7 @@ export const projects = [
     impact: "Increased engagement through personalized, shareable developer insights",
     link: "https://github.com/mikesplore",
     demoLink: "#",
-    repoLink: "https://github.com/mikesplore",
+    repoLink: "https://github.com/mikesplore/github-wrapped",
     docsLink: "#"
   },
   {
@@ -164,7 +252,7 @@ export const projects = [
     impact: "Delivered personality-driven interactions across multiple languages",
     link: "https://github.com/mikesplore",
     demoLink: "#",
-    repoLink: "https://github.com/mikesplore",
+    repoLink: "https://github.com/mikesplore/EehSawa",
     docsLink: "#"
   }
 ];
@@ -256,6 +344,12 @@ export const recognition = [
     organization: "WesterWelle Startup Haus",
     description: "QuickScore – ML-powered loan credibility scoring system",
     year: "2025"
+  },
+  {
+    title: "🏆 Build With AI Hackathon Winner",
+    organization: "Kipepeo Intelligence",
+    description: "AI system for credit worthiness scoring from M-Pesa statements and credit usage",
+    year: "2026"
   },
   {
     title: "Community Engagement",

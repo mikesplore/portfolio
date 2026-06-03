@@ -1,154 +1,89 @@
-import { ExternalLink, Github, Code, Play } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Github } from 'lucide-react';
 import { projects } from '../data/portfolio';
 
 const ProjectCard = ({ project }) => {
-  const isFlagship = project.tier === 'flagship';
+  const liveLink = project.liveLink || project.demoLink;
+  const hasLiveLink = liveLink && liveLink !== '#';
 
   return (
-    <div className={`group relative overflow-hidden rounded-2xl border backdrop-blur-md p-8 shadow-[0_10px_40px_-20px_rgba(255,255,255,0.3)] transition-all duration-300 ${
-      isFlagship 
-        ? 'border-white/20 bg-white/8 hover:border-white/40 lg:col-span-1'
-        : 'border-white/10 bg-white/5 hover:border-white/20'
-    }`}>
-      {/* Subtle accent on hover */}
-      <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-        <div className="absolute -top-20 -right-20 h-40 w-40 bg-white/5 blur-3xl rounded-full" />
-      </div>
-
-      <div className="relative z-10">
-        {/* Header with category and links */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-semibold">{project.category}</div>
-          {isFlagship && (
-            <span className="text-[10px] uppercase tracking-[0.1em] text-yellow-400/80 bg-yellow-400/10 px-2 py-1 rounded">
-              Flagship
-            </span>
-          )}
-        </div>
-
-        {/* Title and problem */}
-        <h3 className="text-2xl font-bold mb-2 tracking-tight text-gray-100">{project.title}</h3>
-        
-        {project.problem && (
-          <p className="text-sm text-gray-400 mb-4 italic leading-relaxed">
-            {project.problem}
-          </p>
-        )}
-
-        {/* Main description */}
-        <p className="text-gray-300 mb-4 leading-relaxed text-sm">{project.description}</p>
-
-        {/* System details for flagship projects */}
-        {isFlagship && project.system && (
-          <div className="mb-4 p-4 rounded-lg bg-white/5 border border-white/10">
-            <p className="text-xs uppercase tracking-[0.15em] text-gray-400 font-semibold mb-2">Architecture</p>
-            <p className="text-sm text-gray-300 leading-relaxed">{project.system}</p>
+    <article className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-6">
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.24em] text-gray-500">{project.category}</p>
+          <h3 className="mt-2 text-xl font-medium tracking-tight text-gray-50">{project.title}</h3>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-300">{project.description}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tech.slice(0, 3).map((tech) => (
+              <span key={tech} className="rounded-full border border-white/10 px-3 py-1 text-[11px] text-gray-400">
+                {tech}
+              </span>
+            ))}
           </div>
-        )}
-
-        {/* Engineering highlights for flagship projects */}
-        {isFlagship && project.highlights && (
-          <div className="mb-6">
-            <p className="text-xs uppercase tracking-[0.15em] text-gray-400 font-semibold mb-3">Engineering Highlights</p>
-            <ul className="space-y-2">
-              {project.highlights.map((highlight, i) => (
-                <li key={i} className="text-sm text-gray-300 flex gap-2">
-                  <span className="text-white/40 mt-1">•</span>
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Tech stack */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.tech.slice(0, 3).map((tech, i) => (
-            <span
-              key={i}
-              className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300"
-            >
-              {tech}
-            </span>
-          ))}
         </div>
 
-        {/* Impact */}
-        <div className="text-sm font-medium text-white/80 mb-6 pb-4 border-t border-white/10 pt-4">
-          ✓ {project.impact}
-        </div>
-
-        {/* Links */}
-        <div className="flex gap-3 flex-wrap">
-          {project.demoLink && project.demoLink !== '#' && (
+        <div className="flex flex-wrap items-center gap-3 text-sm md:justify-end">
+          {hasLiveLink ? (
             <a
-              href={project.demoLink}
+              href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all text-gray-200"
-              title="Live Demo"
+              className="inline-flex items-center gap-2 text-gray-200 transition hover:text-white"
             >
-              <Play className="w-4 h-4" />
-              Demo
+              <ExternalLink className="h-4 w-4" />
+              Live
             </a>
+          ) : (
+            <span className="inline-flex items-center gap-2 text-gray-500">
+              <ExternalLink className="h-4 w-4" />
+              Live unavailable
+            </span>
           )}
-          <a
-            href={project.repoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all text-gray-200"
-            title="GitHub Repository"
-          >
-            <Github className="w-4 h-4" />
-            GitHub
+
+          <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-200 transition hover:text-white">
+            <Github className="h-4 w-4" />
+            Code
           </a>
-          {project.docsLink && project.docsLink !== '#' && (
-            <a
-              href={project.docsLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all text-gray-200"
-              title="Architecture / README"
-            >
-              <Code className="w-4 h-4" />
-              Docs
-            </a>
-          )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
 const Projects = () => {
-  const flagshipProjects = projects.filter(p => p.tier === 'flagship');
-  const otherProjects = projects.filter(p => p.tier !== 'flagship');
+  const webApps = projects.filter((project) => project.type !== 'mobile');
+  const androidApps = projects.filter((project) => project.type === 'mobile');
 
   return (
-    <section id="projects" className="py-32 px-6 border-t border-white/10">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
-          <h2 className="text-5xl font-bold mb-4 tracking-tight text-gray-100">Featured Projects</h2>
-          <p className="text-gray-400 text-lg">Ranked by systems complexity and engineering depth.</p>
-        </div>
+    <section id="projects" className="border-t border-white/10 px-6 py-32">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="text-5xl font-bold mb-8 tracking-tight text-gray-100">Selected Work</h2>
+        <p className="max-w-2xl text-base leading-7 text-gray-400">A short list of web apps and Android apps.</p>
 
-        {/* Flagship Projects */}
-        <div className="mb-16">
-          <h3 className="text-xl font-bold text-gray-200 mb-6 uppercase tracking-wider text-gray-400">Flagship Systems</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {flagshipProjects.map((project, idx) => (
-              <ProjectCard key={idx} project={project} />
-            ))}
+        <div className="mt-16 space-y-12">
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <h3 className="text-sm font-medium uppercase tracking-[0.22em] text-gray-500">Android apps</h3>
+              <span className="h-px flex-1 bg-white/10" />
+            </div>
+
+            <div className="space-y-4">
+              {androidApps.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Secondary & Creative Projects */}
-        <div>
-          <h3 className="text-xl font-bold text-gray-200 mb-6 uppercase tracking-wider text-gray-400">Other Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProjects.map((project, idx) => (
-              <ProjectCard key={idx} project={project} />
-            ))}
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <h3 className="text-sm font-medium uppercase tracking-[0.22em] text-gray-500">Web apps</h3>
+              <span className="h-px flex-1 bg-white/10" />
+            </div>
+
+            <div className="space-y-4">
+              {webApps.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
