@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-06-30",
+    "type": "project",
+    "title": "vela chat",
+    "blurb": "Web version for Vela client",
+    "link": "https://github.com/mikesplore/vela-chat",
+    "tags": [
+      "TypeScript"
+    ]
+  },
+  {
     "date": "2026-06-15",
     "type": "project",
     "title": "vela android",
@@ -27,6 +37,16 @@
     "link": "https://github.com/mikesplore/VelaAI",
     "tags": [
       "TypeScript"
+    ]
+  },
+  {
+    "date": "2026-05-10",
+    "type": "project",
+    "title": "velavps",
+    "blurb": "GitHub repository",
+    "link": "https://github.com/mikesplore/velavps",
+    "tags": [
+      "Python"
     ]
   },
   {
@@ -90,6 +110,14 @@
     ]
   },
   {
+    "date": "2025-12-12",
+    "type": "project",
+    "title": "dyad",
+    "blurb": "Free, local, open-source AI app builder ✨ v0 / lovable / Bolt alternative 🌟 Star if you like it!",
+    "link": "https://github.com/mikesplore/dyad",
+    "tags": []
+  },
+  {
     "date": "2025-12-10",
     "type": "project",
     "title": "quickscore",
@@ -130,6 +158,14 @@
     ]
   },
   {
+    "date": "2025-11-29",
+    "type": "project",
+    "title": "Afara Dada Code",
+    "blurb": "Afara Dada Code is an AI agent designed to bridge the gender funding gap in African technology. It…",
+    "link": "https://github.com/mikesplore/Afara-Dada-Code",
+    "tags": []
+  },
+  {
     "date": "2025-11-20",
     "type": "project",
     "title": "style ai studio",
@@ -137,6 +173,16 @@
     "link": "https://github.com/mikesplore/style-ai-studio",
     "tags": [
       "TypeScript"
+    ]
+  },
+  {
+    "date": "2025-11-18",
+    "type": "project",
+    "title": "Zawadi Tunu",
+    "blurb": "A smart agent built using the Agent Development Kit (ADK) and Vertex AI Memory Bank. It remembers…",
+    "link": "https://github.com/mikesplore/Zawadi-Tunu",
+    "tags": [
+      "Jupyter Notebook"
     ]
   },
   {

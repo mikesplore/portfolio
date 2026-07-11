@@ -7,7 +7,7 @@ export const status = {
   location: 'Mombasa, Kenya',
   tagline: 'Software Engineer · I build and ship apps',
   focus: 'Python, Kotlin, Android & React',
-  experience: '3+ years building software',
+  experience: '3+ years learning and building full stack applications',
 };
 
 export const username = 'mikesplore';

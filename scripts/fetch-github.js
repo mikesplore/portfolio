@@ -5,9 +5,13 @@ const USERNAME = 'mikesplore';
 const PROJECT_REPOS = new Set([
   'vela',
   'vela-android',
+  'vela-chat',
+  'velavps',
   'VelaAI',
   'FarmPulse',
   'Kipepeo-Intelligence',
+  'tessera',
+  'apitemplate',
   'quickscore',
   'Timetable-Frontend',
   'Tuya',
@@ -29,13 +33,20 @@ const HOBBY_REPOS = new Set([
   'PC-Controller',
 ]);
 
+const ALLOWED_FORKS = new Set([
+  'dyad',
+  'afara-dada-code',
+  'zawadi-tunu'
+]);
+
 const INCLUDED_REPOS = new Map(
   [...PROJECT_REPOS].map((name) => [name.toLowerCase(), 'project'])
     .concat([...HOBBY_REPOS].map((name) => [name.toLowerCase(), 'hobby']))
+    .concat([...ALLOWED_FORKS].map((name) => [name.toLowerCase(), 'project']))
 );
 
 const response = await fetch(
-  `https://api.github.com/users/${USERNAME}/repos?sort=created&per_page=100`,
+  `https://api.github.com/users/${USERNAME}/repos?sort=created&per_page=150`,
   {
     headers: {
       Accept: 'application/vnd.github+json',
@@ -51,7 +62,13 @@ if (!response.ok) {
 const repos = await response.json();
 
 const entries = repos
-  .filter((repo) => !repo.fork && INCLUDED_REPOS.has(repo.name.toLowerCase()))
+  .filter((repo) => {
+    const nameLower = repo.name.toLowerCase();
+    const isMatched = INCLUDED_REPOS.has(nameLower);
+    const isAllowedRepo = !repo.fork || ALLOWED_FORKS.has(nameLower);
+    
+    return isMatched && isAllowedRepo;
+  })
   .map((repo) => {
     const type = INCLUDED_REPOS.get(repo.name.toLowerCase());
     const tags = [repo.language].filter(Boolean);
@@ -67,3 +84,4 @@ const entries = repos
   });
 
 writeEntries('entries.github.json', entries);
+console.log(`Successfully filtered and saved ${entries.length} repos to portfolio!`);
