@@ -1,12 +1,5 @@
 export const events = [
-  {
-    title: 'Google DevFest Mombasa 2026',
-    date: '2026-11-08',
-    location: 'Light International School',
-    blurb: 'Tech sessions on Google ecosystem updates, Android development, and AI tools.',
-    image: 'https://i.ibb.co/358T7FKJ/devfest2026.jpg',
-    link: '',
-  },
+  
   {
     title: 'Cursor Mombasa Meetup',
     date: '2026-07-12',
@@ -65,6 +58,14 @@ export const events = [
   },
   {
     title: 'Google DevFest Mombasa 2025',
+    date: '2025-11-08',
+    location: 'Light International School',
+    blurb: 'Tech sessions on Google ecosystem updates, Android development, and AI tools.',
+    image: 'https://i.ibb.co/358T7FKJ/devfest2026.jpg',
+    link: '',
+  },
+  {
+    title: 'Google DevFest Mombasa 2024',
     date: '2025-11-08',
     location: 'Light International School',
     blurb: 'Tech sessions on Google ecosystem updates, Android development, and AI tools.',
