@@ -1,5 +1,5 @@
 /**
- * @typedef {"project" | "hobby" | "writing" | "client" | "talk" | "now"} EntryType
+ * @typedef {"project" | "hobby" | "writing" | "client"} EntryType
  */
 
 /**
@@ -13,13 +13,11 @@
  * @property {string[]} [tags]
  */
 
-export const ENTRY_TYPES = ['project', 'hobby', 'writing', 'client', 'talk', 'now'];
+export const ENTRY_TYPES = ['project', 'hobby', 'writing', 'client'];
 
 export const TYPE_LABELS = {
   project: 'Project',
   hobby: 'Hobby',
   writing: 'Writing',
-  client: 'Client',
-  talk: 'Talk',
-  now: 'Now',
+  client: 'Client'
 };

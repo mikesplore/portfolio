@@ -12,7 +12,7 @@ const Home = () => {
           <p>
             I&apos;m a software engineer based in Mombasa, specializing in full-stack, backend, and Android
             development. My journey started back in 2023 during my second year of computer science. I took the
-            coursework seriously — never had to clear a supplementary or special exam — but I quickly realized
+            coursework seriously  but I quickly realized
             the real learning happens when you start building.
           </p>
           <p>

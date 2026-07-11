@@ -64,13 +64,15 @@ export const hackathons = [
     result: 'Participating',
     description: 'Currently building and submitting a project.',
     year: '2026',
+    organization: 'Online',
     link: 'https://lablab.ai/u/@mikesplore',
   },
   {
     title: 'Lablab AI Hackathon Act II',
     result: 'Submitted',
-    description: 'Project submitted to the hackathon.',
+    description: 'I have built a remote pc control app and submitted it to the hackathon.',
     year: '2026',
+    organization: 'Online',
     link: 'https://lablab.ai/u/@mikesplore',
   },
   {
@@ -79,6 +81,7 @@ export const hackathons = [
     project: 'Kipepeo Intelligence',
     description: 'AI system for credit-worthiness scoring from M-Pesa statements and usage patterns.',
     year: '2026',
+    organization: 'Sote Hub',
     link: 'https://github.com/mikesplore/Kipepeo-Intelligence',
   },
   {
@@ -95,6 +98,7 @@ export const hackathons = [
     result: '#25',
     description: 'Competed as part of a group; placed 25th overall.',
     year: '2025',
+    organization: 'Technical University of Mombasa',
     link: 'https://zindi.africa',
   },
 ];

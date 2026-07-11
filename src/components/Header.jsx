@@ -31,7 +31,7 @@ const Header = () => {
         </div>
 
         <div className="shrink-0">
-          <div className="h-16 w-16 sm:h-24 sm:w-24 overflow-hidden rounded-2xl bg-elevated">
+          <div className="h-24 w-24 sm:h-32 sm:w-32 overflow-hidden rounded-2xl border border-divider bg-elevated">
             <img src={profileImage} alt="Michael Odhiambo" className="h-full w-full object-cover" />
           </div>
         </div>

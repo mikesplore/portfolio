@@ -15,7 +15,7 @@ should take two minutes, not a redesign.
 
 ```ts
 // src/data/types.ts
-export type EntryType = "project" | "hobby" | "writing" | "client" | "talk" | "now";
+export type EntryType = "project" | "hobby" | "writing" | "client";
 
 export interface TimelineEntry {
   date: string;      // ISO, "2026-07-11"
