@@ -11,23 +11,18 @@ const navItems = [
 
 const Nav = () => {
   return (
-    <nav className="flex items-center justify-between gap-4 border-b border-line pb-4" aria-label="Main">
-      <ul className="flex flex-wrap items-center gap-1">
-        {navItems.map((item, index) => (
-          <li key={item.to} className="flex items-center gap-1">
-            {index > 0 && (
-              <span className="px-1 text-subtle select-none" aria-hidden="true">
-                ·
-              </span>
-            )}
+    <nav className="flex items-center justify-between gap-4 border-b border-divider pb-0" aria-label="Main">
+      <ul className="flex flex-wrap items-end gap-1">
+        {navItems.map((item) => (
+          <li key={item.to}>
             <NavLink
               to={item.to}
               end={item.end}
               className={({ isActive }) =>
-                `rounded-lg px-2.5 py-1.5 text-base transition-colors ${
+                `inline-block px-3 py-3 text-base transition-colors border-b-2 -mb-px ${
                   isActive
-                    ? 'bg-accent-soft text-accent font-medium'
-                    : 'text-muted hover:bg-[var(--color-hover)] hover:text-ink'
+                    ? 'border-nav text-nav font-semibold'
+                    : 'border-transparent text-muted hover:text-ink'
                 }`
               }
             >

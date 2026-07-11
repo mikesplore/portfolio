@@ -30,23 +30,25 @@ const TimelineFeed = () => {
     <section aria-label="Timeline">
       <TypeFilter activeType={activeType} onChange={setActiveType} counts={counts} />
 
-      <div className="mt-6">
+      <div className="mt-5">
         {filteredEntries.length === 0 ? (
-          <p className="py-8 text-center text-base text-stone-500">
+          <p className="py-8 text-center text-base text-subtle">
             No {activeType ? `${activeType} ` : ''}entries yet.
           </p>
         ) : (
-          filteredEntries.map((entry) => {
-            const key = getEntryKey(entry);
-            return (
-              <TimelineRow
-                key={key}
-                entry={entry}
-                isExpanded={expandedKey === key}
-                onToggle={() => handleToggle(key)}
-              />
-            );
-          })
+          <div className="rounded-xl bg-elevated overflow-hidden">
+            {filteredEntries.map((entry) => {
+              const key = getEntryKey(entry);
+              return (
+                <TimelineRow
+                  key={key}
+                  entry={entry}
+                  isExpanded={expandedKey === key}
+                  onToggle={() => handleToggle(key)}
+                />
+              );
+            })}
+          </div>
         )}
       </div>
     </section>

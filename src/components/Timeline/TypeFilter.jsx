@@ -18,14 +18,12 @@ const TypeFilter = ({ activeType, onChange, counts }) => {
             type="button"
             onClick={() => handleClick(type)}
             aria-pressed={isActive}
-            className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
-              isActive
-                ? 'border-accent/50 bg-accent/15 text-accent'
-                : 'border-stone-700/80 bg-stone-900/40 text-stone-400 hover:border-stone-600 hover:text-stone-200'
+            className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
+              isActive ? 'chip-active' : 'chip hover:bg-[var(--color-hover)] hover:text-ink'
             }`}
           >
             {label}
-            {count > 0 && <span className="ml-1.5 text-stone-500">{count}</span>}
+            {count > 0 && <span className="ml-1.5 text-subtle">{count}</span>}
           </button>
         );
       })}

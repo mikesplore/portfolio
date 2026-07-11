@@ -33,7 +33,7 @@ const EntryIcon = ({ title, type, link }) => {
         alt=""
         width={36}
         height={36}
-        className="h-9 w-9 rounded-md bg-stone-900/80 object-contain p-1"
+        className="h-9 w-9 rounded-md bg-card object-contain p-1"
         loading="lazy"
       />
     );

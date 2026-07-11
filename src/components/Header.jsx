@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Github, Mail } from 'lucide-react';
 import profileImage from '../data/profile.jpg';
 import { socialLinks } from '../data/portfolio';
+import { availability, status } from '../data/profile';
 
 const getSocialIcon = (name) => {
   switch (name) {
@@ -32,30 +33,32 @@ const getSocialIcon = (name) => {
   }
 };
 
-const statusBullets = [
-  'Freelance full-stack · Mombasa, Kenya',
-  'Kotlin backends, Android, LLM-assisted tooling',
-];
-
 const Header = () => {
   const pillSocials = socialLinks.filter((link) => link.name !== 'Email');
 
   return (
-    <header className="pt-8 pb-6">
+    <header className="pt-4 pb-6">
       <div className="flex items-start justify-between gap-6">
         <div className="min-w-0 flex-1">
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-stone-100">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-teal-soft px-3 py-1.5">
+            <span className="h-2 w-2 rounded-full bg-teal animate-pulse" aria-hidden="true" />
+            <span className="text-sm font-medium text-teal">{availability.status}</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-ink">
             Michael Odhiambo
           </h1>
-          <p className="mt-2 text-base text-stone-400">Full-stack developer · systems engineer</p>
+          <p className="mt-2 text-base text-muted">Full-stack developer · systems engineer</p>
 
           <ul className="mt-4 space-y-2">
-            {statusBullets.map((bullet) => (
-              <li key={bullet} className="flex items-center gap-2 text-base text-stone-300">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                {bullet}
-              </li>
-            ))}
+            <li className="flex items-center gap-2 text-base text-muted">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+              {status.location}
+            </li>
+            <li className="flex items-center gap-2 text-base text-muted">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+              {status.focus}
+            </li>
           </ul>
 
           <div className="mt-5 flex flex-wrap items-center gap-2">
@@ -65,7 +68,7 @@ const Header = () => {
                 href={link.url}
                 target={link.url.startsWith('http') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="inline-flex items-center gap-1.5 rounded-full border border-stone-700/80 bg-stone-900/60 px-3.5 py-2 text-sm text-stone-300 transition-colors hover:border-stone-500 hover:text-stone-100"
+                className="inline-flex items-center gap-1.5 rounded-full bg-elevated px-3.5 py-2 text-sm text-muted transition-colors hover:bg-[var(--color-hover)] hover:text-ink"
               >
                 {getSocialIcon(link.name)}
                 {link.label}
@@ -73,7 +76,7 @@ const Header = () => {
             ))}
             <Link
               to="/contact"
-              className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/15 px-3.5 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/25"
+              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3.5 py-2 text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
             >
               <Mail className="w-4 h-4" />
               Say hello
@@ -82,7 +85,7 @@ const Header = () => {
         </div>
 
         <div className="shrink-0">
-          <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-xl border border-stone-700/80 bg-stone-900">
+          <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-2xl bg-elevated">
             <img src={profileImage} alt="Michael Odhiambo" className="h-full w-full object-cover" />
           </div>
         </div>

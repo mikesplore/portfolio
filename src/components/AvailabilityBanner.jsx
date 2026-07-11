@@ -4,7 +4,7 @@ import { availability } from '../data/profile';
 
 const AvailabilityBanner = () => {
   return (
-    <div className="rounded-2xl border border-accent/25 bg-accent-soft p-5 sm:p-6">
+    <div className="rounded-2xl bg-accent-soft p-5 sm:p-6">
       <div className="flex items-start gap-3">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
           <Briefcase className="h-5 w-5" aria-hidden="true" />

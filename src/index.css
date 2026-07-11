@@ -7,10 +7,12 @@
 [data-theme='light'] {
   --color-page: #f8f6f2;
   --color-card: #ffffff;
+  --color-elevated: #f3f1ed;
   --color-ink: #1c1917;
   --color-muted: #57534e;
   --color-subtle: #a8a29e;
-  --color-line: #e7e5e4;
+  --color-line: transparent;
+  --color-divider: rgba(28, 25, 23, 0.1);
   --color-accent: #c2410c;
   --color-accent-soft: #fff7ed;
   --color-on-accent: #ffffff;
@@ -19,16 +21,19 @@
   --color-glow-a: rgba(194, 65, 12, 0.12);
   --color-glow-b: rgba(15, 118, 110, 0.1);
   --color-hover: rgba(28, 25, 23, 0.04);
+  --color-nav: #2563eb;
   color-scheme: light;
 }
 
 [data-theme='dark'] {
   --color-page: #141210;
-  --color-card: #1e1b18;
+  --color-card: #1c1917;
+  --color-elevated: #252220;
   --color-ink: #f5f5f4;
   --color-muted: #a8a29e;
   --color-subtle: #78716e;
-  --color-line: #2d2926;
+  --color-line: transparent;
+  --color-divider: rgba(255, 255, 255, 0.04);
   --color-accent: #f59e0b;
   --color-accent-soft: #2a2010;
   --color-on-accent: #1a1614;
@@ -36,7 +41,8 @@
   --color-teal-soft: #132825;
   --color-glow-a: rgba(245, 158, 11, 0.14);
   --color-glow-b: rgba(45, 212, 191, 0.1);
-  --color-hover: rgba(255, 255, 255, 0.04);
+  --color-hover: rgba(255, 255, 255, 0.05);
+  --color-nav: #60a5fa;
   color-scheme: dark;
 }
 
@@ -81,10 +87,22 @@ a {
 
 @layer components {
   .chip {
-    @apply rounded-full border border-line bg-page px-3 py-1.5 text-sm text-muted;
+    border-radius: 9999px;
+    background-color: var(--color-elevated);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-muted);
   }
 
   .chip-active {
-    @apply border-accent/40 bg-accent-soft text-accent;
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent);
+  }
+
+  .divider {
+    height: 1px;
+    border: none;
+    background-color: var(--color-divider);
   }
 }
