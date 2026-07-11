@@ -1,6 +1,5 @@
 import { GraduationCap, Wrench } from 'lucide-react';
-import { skillsGrouped } from '../data/portfolio';
-import { education } from '../data/profile';
+import { education, skillsGrouped } from '../data/profile';
 import AvailabilityBanner from '../components/AvailabilityBanner';
 import SectionCard from '../components/SectionCard';
 
@@ -40,8 +39,8 @@ const Home = () => {
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                  <span key={skill.name} className="chip">
-                    {skill.name}
+                  <span key={skill} className="chip">
+                    {skill}
                   </span>
                 ))}
               </div>

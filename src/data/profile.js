@@ -8,6 +8,45 @@ export const status = {
   focus: 'Kotlin backends, Android, LLM-assisted tooling',
 };
 
+export const username = 'mikesplore';
+export const xUsername = 'mikespllore';
+
+export const socialLinks = [
+  { name: 'GitHub', url: 'https://github.com/mikesplore', label: 'GitHub' },
+  { name: 'Dev.to', url: 'https://dev.to/mikesplore', label: 'dev.to' },
+  { name: 'Google Dev', url: 'https://g.dev/mikesplore', label: 'Google Developers' },
+  { name: 'Lablab', url: 'https://lablab.ai/u/@mikesplore', label: 'Lablab' },
+  { name: 'X', url: `https://x.com/${xUsername}`, label: 'X' },
+  { name: 'Email', url: 'mailto:mikepremium8@gmail.com', label: 'Email' },
+];
+
+export const contactSocials = [
+  { name: 'Reddit', url: `https://reddit.com/u/${username}`, handle: username },
+  { name: 'Instagram', url: `https://instagram.com/${username}`, handle: username },
+  { name: 'Telegram', url: `https://t.me/${username}`, handle: username },
+  { name: 'X', url: `https://x.com/${xUsername}`, handle: xUsername },
+  { name: 'WhatsApp', url: 'https://wa.me/254799013845', handle: username },
+];
+
+export const skillsGrouped = [
+  {
+    system: 'Backend & APIs',
+    skills: ['Ktor', 'Kotlin', 'Django', 'RESTful APIs'],
+  },
+  {
+    system: 'Databases & Constraints',
+    skills: ['PostgreSQL', 'Constraint Logic', 'Transaction Management', 'MongoDB'],
+  },
+  {
+    system: 'AI Systems',
+    skills: ['Vector Search & RAG', 'LLM Integration', 'Retrieval Pipelines'],
+  },
+  {
+    system: 'Mobile & UI',
+    skills: ['Jetpack Compose', 'React', 'Kotlin Multiplatform'],
+  },
+];
+
 export const education = [
   {
     degree: 'Bachelor of Science in Computer Science',

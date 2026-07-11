@@ -4,26 +4,13 @@ import Nav from './Nav';
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-page text-ink font-sans relative">
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute -top-24 right-0 h-80 w-80 rounded-full blur-3xl"
-          style={{ background: 'var(--color-glow-a)' }}
-        />
-        <div
-          className="absolute top-1/3 -left-24 h-72 w-72 rounded-full blur-3xl"
-          style={{ background: 'var(--color-glow-b)' }}
-        />
-      </div>
-
-      <div className="relative z-10">
-        <div className="mx-auto max-w-3xl px-5 sm:px-6 py-6 sm:py-8">
-          <Header />
-          <Nav />
-          <main className="pt-8">
-            <Outlet />
-          </main>
-        </div>
+    <div className="min-h-screen bg-page text-ink font-sans">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 py-6 sm:py-8">
+        <Header />
+        <Nav />
+        <main className="pt-8">
+          <Outlet />
+        </main>
       </div>
     </div>
   );
