@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
 import { events } from '../data/events';
 import { hackathons } from '../data/profile';
 import { bucketListItems } from '../data/bucketList';
@@ -17,41 +16,36 @@ const navItems = [
 const Nav = () => {
   return (
     <nav className="w-full border-b border-divider" aria-label="Main">
-      <div className="flex items-end gap-3">
-        <div className="scroll-pills -mx-5 min-w-0 flex-1 overflow-x-auto px-5 sm:-mx-6 sm:px-6">
-          <ul className="flex w-max items-end gap-1">
-            {navItems.map((item) => (
-              <li key={item.to} className="shrink-0">
-                <NavLink
-                  to={item.to}
-                  end={item.end}
-                  className={({ isActive }) =>
-                    `inline-block px-3 py-3 text-base transition-colors border-b-2 -mb-px ${
-                      isActive
-                        ? 'border-nav text-nav font-semibold'
-                        : 'border-transparent text-muted hover:text-ink'
-                    }`
-                  }
-                >
-                  <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                    {item.label}
-                    {item.count != null && (
-                      <span
-                        className="rounded-full bg-elevated px-1.5 py-0.5 text-xs tabular-nums text-subtle"
-                        aria-label={`${item.count} ${item.label.toLowerCase()}`}
-                      >
-                        {item.count}
-                      </span>
-                    )}
-                  </span>
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="shrink-0 pb-3">
-          <ThemeToggle />
-        </div>
+      <div className="scroll-pills -mx-5 overflow-x-auto px-5 sm:-mx-6 sm:px-6">
+        <ul className="flex w-max items-end gap-1">
+          {navItems.map((item) => (
+            <li key={item.to} className="shrink-0">
+              <NavLink
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  `inline-block px-3 py-3 text-base transition-colors border-b-2 -mb-px ${
+                    isActive
+                      ? 'border-nav text-nav font-semibold'
+                      : 'border-transparent text-muted hover:text-ink'
+                  }`
+                }
+              >
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                  {item.label}
+                  {item.count != null && (
+                    <span
+                      className="rounded-full bg-elevated px-1.5 py-0.5 text-xs tabular-nums text-subtle"
+                      aria-label={`${item.count} ${item.label.toLowerCase()}`}
+                    >
+                      {item.count}
+                    </span>
+                  )}
+                </span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );

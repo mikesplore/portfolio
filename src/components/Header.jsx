@@ -1,6 +1,7 @@
 import profileImage from '../data/profile.jpg';
 import { socialLinks, status } from '../data/profile';
 import SocialIcon from './SocialIcon';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const pillSocials = socialLinks.filter((link) => link.name !== 'Email');
@@ -30,7 +31,8 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="shrink-0">
+        <div className="flex shrink-0 flex-col items-end gap-3">
+          <ThemeToggle />
           <div className="h-24 w-24 sm:h-32 sm:w-32 overflow-hidden rounded-2xl border border-divider bg-elevated">
             <img src={profileImage} alt="Michael Odhiambo" className="h-full w-full object-cover" />
           </div>
