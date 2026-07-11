@@ -1,11 +1,13 @@
 export const availability = {
   status: 'Open to opportunities',
-  detail: 'Currently unemployed and actively looking for full-time or contract work — backend, Android, or full-stack.',
+  detail: 'Currently unemployed and actively looking for full-time or contract work.',
 };
 
 export const status = {
   location: 'Mombasa, Kenya',
-  focus: 'Kotlin backends, Android, LLM-assisted tooling',
+  tagline: 'Software Engineer · I build and ship apps',
+  focus: 'Python, Kotlin, Android & React',
+  experience: '3+ years building software',
 };
 
 export const username = 'mikesplore';

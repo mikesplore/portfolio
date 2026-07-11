@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
+import ProjectOrigin from '../../components/ProjectOrigin';
 
 const highlights = [
   'Sensor ingestion pipeline for soil moisture, temperature, and flow rates',
@@ -32,6 +33,8 @@ const FarmPulse = () => {
           uploads, and the React frontend stays usable on modest hardware and mobile screens.
         </p>
       </section>
+
+      <ProjectOrigin slug="farmpulse" />
 
       <section>
         <h2 className="text-sm font-medium uppercase tracking-wider text-subtle">Highlights</h2>

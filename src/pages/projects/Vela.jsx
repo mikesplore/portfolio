@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
+import ProjectOrigin from '../../components/ProjectOrigin';
 
 const highlights = [
   'Native Android (Kotlin) app with clean lifecycle architecture for device monitoring',
@@ -39,6 +40,8 @@ const Vela = () => {
           command grammar to maintain.
         </p>
       </section>
+
+      <ProjectOrigin slug="vela" />
 
       <section>
         <h2 className="text-sm font-medium uppercase tracking-wider text-subtle">Highlights</h2>

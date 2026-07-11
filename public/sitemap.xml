@@ -19,10 +19,22 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mikesplore.me/about</loc>
+    <loc>https://mikesplore.me/events</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mikesplore.me/bucket-list</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mikesplore.me/cv</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mikesplore.me/contact</loc>
@@ -38,6 +50,12 @@
   </url>
   <url>
     <loc>https://mikesplore.me/projects/farmpulse</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mikesplore.me/projects/kipepeo</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

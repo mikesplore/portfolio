@@ -8,10 +8,25 @@ export const manualEntries = [
     tags: ['Kotlin', 'Ktor', 'Compose', 'LLMs'],
   },
   {
+    date: '2026-06-15',
+    type: 'writing',
+    title: 'Job search notes — what the market actually looks like from Mombasa',
+    blurb: 'Unemployed and applying. Remote roles want US hours, local roles want five years for intern pay.',
+    tags: ['Notes', 'Career'],
+  },
+  {
+    date: '2026-05-20',
+    type: 'writing',
+    title: 'Client red flags I keep seeing on freelance briefs',
+    blurb: 'Vague scope, no deposit, "we\'ll pay after it goes viral" — patterns worth writing down before you sign.',
+    tags: ['Notes', 'Freelance'],
+  },
+  {
     date: '2026-01-18',
     type: 'project',
     title: 'Kipepeo Intelligence — Build With AI Hackathon winner',
     blurb: 'Credit-worthiness scoring from M-Pesa statements and mobile money behavior.',
+    slug: 'kipepeo',
     link: 'https://github.com/mikesplore/Kipepeo-Intelligence',
     tags: ['Python', 'M-Pesa', 'AI Scoring'],
   },
@@ -30,7 +45,7 @@ export const manualEntries = [
     title: 'Weather-AI / verika.org scam investigation',
     blurb: 'Documented how a fake weather-AI site funnels users into a crypto recovery scam.',
     link: 'https://dev.to/mikesplore',
-    tags: ['Security', 'Investigation'],
+    tags: ['Notes', 'Security'],
   },
   {
     date: '2025-10-20',
@@ -47,13 +62,6 @@ export const manualEntries = [
     title: 'M-Pesa SMS analyzer pivot',
     blurb: 'Pivoted a transaction parser prototype into a reusable SMS ingestion layer for lending apps.',
     tags: ['Kotlin', 'M-Pesa', 'NLP'],
-  },
-  {
-    date: '2025-06-22',
-    type: 'talk',
-    title: 'Ubunifu Hackathon — QuickScore winner',
-    blurb: 'Presented ML-powered loan credibility scoring; took first place at WesterWelle Startup Haus.',
-    tags: ['ML', 'Fintech', 'Hackathon'],
   },
   {
     date: '2025-04-08',
@@ -78,12 +86,5 @@ export const manualEntries = [
     blurb: 'Scrapes your GitHub year and lets an LLM write a shareable, slightly mean recap.',
     link: 'https://github.com/mikesplore/github-wrapped',
     tags: ['LLMs', 'GitHub API'],
-  },
-  {
-    date: '2024-10-12',
-    type: 'talk',
-    title: 'Google DevFest Mombasa 2024',
-    blurb: 'Attended talks on Android, AI tooling, and local developer ecosystem building.',
-    tags: ['Community', 'Android'],
   },
 ];
