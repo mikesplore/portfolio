@@ -373,6 +373,7 @@ export const techStack = [
 export const socialLinks = [
   { name: "GitHub", url: "https://github.com/mikesplore", label: "GitHub" },
   { name: "Google Dev", url: "https://g.dev/mikesplore", label: "Google Developers" },
+  { name: "Lablab", url: "https://lablab.ai/u/@mikesplore", label: "Lablab" },
   { name: "X", url: "https://x.com/pandeylore", label: "X" },
   { name: "Email", url: "mailto:mikepremium8@gmail.com", label: "Email" }
 ];

@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2026-06-12",
+    "type": "writing",
+    "title": "AI is Just the Brain. Developers Build the Hands.",
+    "blurb": "I ask myself this question constantly from a developer’s perspective: Does the AI actually do the...",
+    "link": "https://dev.to/mikesplore/ai-is-just-the-brain-developers-build-the-hands-a95",
+    "tags": [
+      "agents",
+      "ai",
+      "automation",
+      "discuss"
+    ]
+  },
+  {
+    "date": "2025-12-07",
+    "type": "writing",
+    "title": "Building with AI: A Deep Dive Into My Gemini-Powered Projects",
+    "blurb": "Over the year, I’ve been experimenting with AI APIs, search engines, and creative automation —…",
+    "link": "https://dev.to/mikesplore/building-with-ai-a-deep-dive-into-my-gemini-powered-projects-j09",
+    "tags": []
+  },
+  {
+    "date": "2025-07-20",
+    "type": "writing",
+    "title": "🔐 Layered JWT + RBAC Authorization in Ktor: My Scalable Approach",
+    "blurb": "Tags: #ktor #kotlin #backend #security #authentication #rbac Modern backend development requires…",
+    "link": "https://dev.to/mikesplore/layered-jwt-rbac-authorization-in-ktor-my-scalable-approach-ahh",
+    "tags": [
+      "kotlin",
+      "backend",
+      "authentication",
+      "rbac"
+    ]
+  },
+  {
+    "date": "2025-07-13",
+    "type": "writing",
+    "title": "Breaking Circular Dependencies in Kotlin with the Mediator Pattern",
+    "blurb": "Have you ever run into a StackOverflowError when starting your application and wondered what went...",
+    "link": "https://dev.to/mikesplore/breaking-circular-dependencies-in-kotlin-with-the-mediator-pattern-136d",
+    "tags": [
+      "kotlin",
+      "programming",
+      "coding"
+    ]
+  },
+  {
+    "date": "2025-07-12",
+    "type": "writing",
+    "title": "🤖 API vs Endpoint - What's the Difference? (With Real Full-Stack Code)",
+    "blurb": "If you're building a full-stack application using frontend frameworks and a backend like Ktor,...",
+    "link": "https://dev.to/mikesplore/api-vs-endpoint-whats-the-difference-with-real-full-stack-code-587p",
+    "tags": [
+      "kotlin"
+    ]
+  },
+  {
+    "date": "2025-07-09",
+    "type": "writing",
+    "title": "Implementing Role-Based Access Control (RBAC) in Kotlin with Ktor: A Complete Guide",
+    "blurb": "Role-Based Access Control (RBAC) is essential for securing modern web applications. In this…",
+    "link": "https://dev.to/mikesplore/implementing-role-based-access-control-rbac-in-kotlin-with-ktor-a-complete-guide-2p0m",
+    "tags": [
+      "kotlin",
+      "programming"
+    ]
+  },
+  {
+    "date": "2025-07-09",
+    "type": "writing",
+    "title": "Building an AI Documentation Agent with Cohere",
+    "blurb": "Have you ever wished your project documentation could answer questions directly? In this article,...",
+    "link": "https://dev.to/mikesplore/building-an-ai-documentation-agent-with-cohere-5ajm",
+    "tags": [
+      "kotlin"
+    ]
+  }
+]
