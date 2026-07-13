@@ -50,7 +50,11 @@ const Home = () => {
             values engineering rigor and cares about shipping software that actually works in production.
           </p>
           <p>
-            For a complete, unfiltered look at the projects, hackathons, and systems I&apos;ve built, check out the{' '}
+            For a complete look at the systems I&apos;ve built, start with{' '}
+            <Link to="/projects" className="font-medium text-accent hover:text-accent/80">
+              projects
+            </Link>{' '}
+            and then browse the{' '}
             <Link to="/timeline" className="font-medium text-accent hover:text-accent/80">
               timeline
             </Link>

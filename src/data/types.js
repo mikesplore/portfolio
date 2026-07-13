@@ -1,5 +1,5 @@
 /**
- * @typedef {"project" | "hobby" | "writing" | "client"} EntryType
+ * @typedef {"repo" | "writing"} EntryType
  */
 
 /**
@@ -9,15 +9,12 @@
  * @property {string} title
  * @property {string} blurb - one line
  * @property {string} [link] - external URL
- * @property {string} [slug] - internal deep-dive page key
  * @property {string[]} [tags]
  */
 
-export const ENTRY_TYPES = ['project', 'hobby', 'writing', 'client'];
+export const ENTRY_TYPES = ['repo', 'writing'];
 
 export const TYPE_LABELS = {
-  project: 'Project',
-  hobby: 'Hobby',
+  repo: 'GitHub',
   writing: 'Writing',
-  client: 'Client'
 };

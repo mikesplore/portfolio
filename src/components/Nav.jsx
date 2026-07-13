@@ -2,9 +2,16 @@ import { NavLink } from 'react-router-dom';
 import { events } from '../data/events';
 import { hackathons } from '../data/profile';
 import { bucketListItems } from '../data/bucketList';
+import { projectsCatalog } from '../data/projectsCatalog';
 
 const navItems = [
   { to: '/', label: 'About', end: true },
+  {
+    to: '/projects',
+    label: 'Projects',
+    end: false,
+    count: projectsCatalog.length,
+  },
   { to: '/timeline', label: 'Timeline', end: false },
   { to: '/hackathons', label: 'Hackathons', end: false, count: hackathons.length },
   { to: '/events', label: 'Events', end: false, count: events.length },

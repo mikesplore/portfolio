@@ -1,4 +1,3 @@
-import { manualEntries } from './entries.manual.js';
 import devtoEntries from './entries.devto.json';
 import githubEntries from './entries.github.json';
 
@@ -34,7 +33,6 @@ const dedupeEntries = (entries) => {
 
 /** @type {import('./types.js').TimelineEntry[]} */
 export const entries = dedupeEntries([
-  ...manualEntries,
+  ...githubEntries.map((entry) => ({ ...entry, type: 'repo' })),
   ...devtoEntries,
-  ...githubEntries,
 ]).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

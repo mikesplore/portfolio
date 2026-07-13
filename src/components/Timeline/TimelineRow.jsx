@@ -1,5 +1,4 @@
 import { ChevronDown, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import EntryIcon from './EntryIcon';
 
 const formatDate = (isoDate) => {
@@ -48,11 +47,6 @@ const TimelineRow = ({ entry, isExpanded, onToggle }) => {
           )}
 
           <div className="mt-3 flex flex-wrap gap-4 text-base">
-            {entry.slug && (
-              <Link to={`/projects/${entry.slug}`} className="font-medium text-accent hover:text-accent/80">
-                Read more →
-              </Link>
-            )}
             {entry.link && (
               <a
                 href={entry.link}

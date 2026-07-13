@@ -1,4 +1,5 @@
 const TYPE_COLORS = {
+  repo: 'bg-slate-500/20 text-slate-300',
   project: 'bg-amber-500/20 text-amber-300',
   hobby: 'bg-teal-500/20 text-teal-300',
   writing: 'bg-violet-500/20 text-violet-300',
