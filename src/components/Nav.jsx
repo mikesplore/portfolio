@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { events } from '../data/events';
 import { hackathons } from '../data/profile';
@@ -21,9 +22,28 @@ const navItems = [
 ];
 
 const Nav = () => {
+  const scrollContainerRef = useRef(null);
+
+  const handleWheelScroll = (event) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const isOverflowing = container.scrollWidth > container.clientWidth;
+    if (!isOverflowing) return;
+
+    if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+      container.scrollLeft += event.deltaY;
+      event.preventDefault();
+    }
+  };
+
   return (
     <nav className="w-full border-b border-divider" aria-label="Main">
-      <div className="scroll-pills -mx-5 overflow-x-auto px-5 sm:-mx-6 sm:px-6">
+      <div
+        ref={scrollContainerRef}
+        onWheel={handleWheelScroll}
+        className="scroll-pills -mx-5 overflow-x-auto px-5 sm:-mx-6 sm:px-6"
+      >
         <ul className="flex w-max items-end gap-1">
           {navItems.map((item) => (
             <li key={item.to} className="shrink-0">
