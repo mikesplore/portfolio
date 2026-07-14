@@ -23,7 +23,6 @@ export const socialLinks = [
 ];
 
 export const contactSocials = [
-  { name: 'Reddit', url: `https://reddit.com/u/${username}`, handle: username },
   { name: 'Instagram', url: `https://instagram.com/${username}`, handle: username },
   { name: 'Telegram', url: `https://t.me/${username}`, handle: username },
   { name: 'X', url: `https://x.com/${xUsername}`, handle: xUsername },
