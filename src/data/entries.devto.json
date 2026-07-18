@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-07-18",
+    "type": "writing",
+    "title": "I Built a Remote Linux Agent Because I Kept Forgetting Commands and Hating SSH Loops",
+    "blurb": "I wanted to manage my laptop from anywhere without being on the same network. Not \"same WiFi\"…",
+    "link": "https://dev.to/mikesplore/i-built-a-remote-linux-agent-because-i-kept-forgetting-commands-and-hating-ssh-loops-172g",
+    "tags": []
+  },
+  {
     "date": "2026-06-12",
     "type": "writing",
     "title": "AI is Just the Brain. Developers Build the Hands.",
