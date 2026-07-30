@@ -20,6 +20,7 @@ const PROJECT_REPOS = new Set([
   'style-ai-studio',
   'MyKeja',
   'Uni-Connect',
+  'gatekeeperd',
 ]);
 
 const HOBBY_REPOS = new Set([
@@ -37,6 +38,13 @@ const ALLOWED_FORKS = new Set([
   'dyad',
   'afara-dada-code',
   'zawadi-tunu'
+]);
+
+const CUSTOM_OVERRIDES = new Map([
+  ['gatekeeperd', {
+    blurb: 'Automatically blocks client websites when payment due has passed, and manage paid projects.',
+    link: 'https://gatekeeperd.mikesplore.me',
+  }],
 ]);
 
 const INCLUDED_REPOS = new Map(
@@ -72,13 +80,14 @@ const entries = repos
   .map((repo) => {
     const type = INCLUDED_REPOS.get(repo.name.toLowerCase());
     const tags = [repo.language].filter(Boolean);
+    const override = CUSTOM_OVERRIDES.get(repo.name.toLowerCase());
 
     return {
       date: repo.created_at.split('T')[0],
       type,
       title: repo.name.replace(/-/g, ' '),
-      blurb: oneLine(repo.description) || 'GitHub repository',
-      link: repo.html_url,
+      blurb: override?.blurb || oneLine(repo.description) || 'GitHub repository',
+      link: override?.link || repo.html_url,
       tags,
     };
   });

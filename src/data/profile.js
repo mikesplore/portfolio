@@ -59,9 +59,25 @@ export const education = [
 
 export const hackathons = [
   {
-    title: 'Lablab AI Native Builder Hackathon',
+    title: 'OpenAI Build Week',
     result: 'Participating',
-    description: 'Currently building and submitting a project.',
+    description: 'Building with Codex and GPT-5.6 for the global OpenAI hackathon sprint.',
+    year: '2026',
+    organization: 'Online · Devpost',
+    link: 'https://openai.devpost.com/',
+  },
+  {
+    title: 'Build with Gemma - GDG Pwani',
+    result: 'Participating',
+    description: 'Gemma 4 hackathon sprint in Mombasa - hands-on with Google DeepMind open models.',
+    year: '2026',
+    organization: 'GDG Pwani · Mombasa, Kenya',
+    link: 'https://gdg.community.dev/events/details/google-gdg-pwani-presents-build-with-gemma-hackathon-pwani/',
+  },
+  {
+    title: 'Lablab AI Native Builder Hackathon',
+    result: 'Submitted',
+    description: 'Built and submitted a project to the Lablab AI Native Builder hackathon.',
     year: '2026',
     organization: 'Online',
     link: 'https://lablab.ai/u/@mikesplore',
@@ -69,7 +85,7 @@ export const hackathons = [
   {
     title: 'Lablab AI Hackathon Act II',
     result: 'Submitted',
-    description: 'I have built a remote pc control app and submitted it to the hackathon.',
+    description: 'Built a remote PC control app and submitted it to the hackathon.',
     year: '2026',
     organization: 'Online',
     link: 'https://lablab.ai/u/@mikesplore',

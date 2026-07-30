@@ -8,6 +8,13 @@ const resultStyles = {
   '#25': 'bg-elevated text-muted',
 };
 
+const getLinkLabel = (item) => {
+  if (item.linkLabel) return item.linkLabel;
+  if (item.result === 'Winner' || item.link?.includes('github.com')) return 'View project';
+  if (item.result === 'Participating' || item.result === 'Submitted') return 'View hackathon';
+  return 'View details';
+};
+
 const Hackathons = () => {
   return (
     <ul className="divide-y divide-divider rounded-xl bg-elevated overflow-hidden">
@@ -41,9 +48,7 @@ const Hackathons = () => {
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1.5 text-base font-medium text-accent hover:text-accent/80"
             >
-              {item.result === 'Participating' || item.result === 'Submitted'
-                ? 'Lablab profile'
-                : 'View project'}
+              {getLinkLabel(item)}
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
           )}

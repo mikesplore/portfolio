@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-07-28",
+    "type": "project",
+    "title": "gatekeeperd",
+    "blurb": "Automatically blocks client websites when payment due has passed, and manage paid projects.",
+    "link": "https://gatekeeperd.mikesplore.me",
+    "tags": [
+      "Kotlin"
+    ]
+  },
+  {
     "date": "2026-06-30",
     "type": "project",
     "title": "vela chat",
