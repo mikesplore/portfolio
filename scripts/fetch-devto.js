@@ -14,7 +14,7 @@ const articles = await response.json();
 
 const entries = articles.map((article) => ({
   date: article.published_at.split('T')[0],
-  type: 'writing',
+  type: 'articles',
   title: article.title,
   blurb: oneLine(article.description) || 'Dev.to article',
   link: article.url,

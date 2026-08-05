@@ -2,7 +2,7 @@ const TYPE_COLORS = {
   repo: 'bg-slate-500/20 text-slate-300',
   project: 'bg-amber-500/20 text-amber-300',
   hobby: 'bg-teal-500/20 text-teal-300',
-  writing: 'bg-violet-500/20 text-violet-300',
+  articles: 'bg-violet-500/20 text-violet-300',
   client: 'bg-sky-500/20 text-sky-300',
   talk: 'bg-emerald-500/20 text-emerald-300',
   now: 'bg-rose-500/20 text-rose-300',
