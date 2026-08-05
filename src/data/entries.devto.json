@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-08-05",
+    "type": "writing",
+    "title": "I Built a Self-Hosted Platform That Deploys Client Apps and Gates Them Behind a Paywall When They Don't Pay",
+    "blurb": "I built a self-hosted deployment platform that automatically deploys Docker apps, provisions nginx...",
+    "link": "https://dev.to/mikesplore/i-built-a-self-hosted-platform-that-deploys-client-apps-and-gates-them-behind-a-paywall-when-they-30ke",
+    "tags": [
+      "kotlin",
+      "nginx",
+      "containers"
+    ]
+  },
+  {
     "date": "2026-07-18",
     "type": "writing",
     "title": "I Built a Remote Linux Agent Because I Kept Forgetting Commands and Hating SSH Loops",
