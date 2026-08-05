@@ -2,7 +2,7 @@ export const events = [
   {
     title: 'Google I/O Extended Pwani',
     date: '2026-08-01',
-    location: 'Westerwelle Startup Haus',
+    location: 'Westerwelle Startup Haus, Mombasa',
     blurb: 'Attended Google I/O Extended Pwani - sessions on the latest Google ecosystem updates, AI tools, and developer platforms.',
     image: 'https://i.ibb.co/ccK8dWKF/Screenshot-From-2026-08-05-17-11-37.png',
     link: '',
@@ -42,7 +42,7 @@ export const events = [
   {
     title: 'AI Buildathon',
     date: '2026-04-12',
-    location: 'Sote Hub',
+    location: 'Sote Hub, Mombasa',
     blurb: 'Built a project using Google Cloud credits and won first place (KES 5,000).',
     image: 'https://i.ibb.co/BVW6D6br/buildathon.jpg',
     link: '',
@@ -50,7 +50,7 @@ export const events = [
   {
     title: 'Ubunifu Hackathon',
     date: '2025-12-06',
-    location: 'WesterWelle Startup Haus',
+    location: 'WesterWelle Startup Haus, Mombasa',
     blurb: 'Worked in a team to build and present a functional prototype, winning €1,000.',
     image: 'https://i.ibb.co/1tzPVchx/ubunifu.jpg',
     link: '',
@@ -58,7 +58,7 @@ export const events = [
   {
     title: 'WesterWelle Community Party',
     date: '2025-12-18',
-    location: 'WesterWelle Startup Haus',
+    location: 'WesterWelle Startup Haus, Mombasa',
     blurb: 'End-of-year community networking, games, and discussions on local startups.',
     image: 'https://i.ibb.co/j97TfLmf/westerwellecommunity.jpg',
     link: '',
@@ -66,7 +66,7 @@ export const events = [
   {
     title: 'Google DevFest Mombasa 2025',
     date: '2025-11-08',
-    location: 'Light International School',
+    location: 'Light International School, Mombasa',
     blurb: 'Tech sessions on Google ecosystem updates, Android development, and AI tools.',
     image: 'https://i.ibb.co/358T7FKJ/devfest2026.jpg',
     link: '',
@@ -74,7 +74,7 @@ export const events = [
   {
     title: 'Google DevFest Mombasa 2024',
     date: '2025-11-08',
-    location: 'Light International School',
+    location: 'Light International School, Mombasa',
     blurb: 'Tech sessions on Google ecosystem updates, Android development, and AI tools.',
     image: 'https://i.ibb.co/BV4SY2H5/devfest2025.jpg',
     link: '',
@@ -90,7 +90,7 @@ export const events = [
   {
     title: 'Build With Africa\'s Talking',
     date: '2025-10-25',
-    location: 'WesterWelle Startup Haus',
+    location: 'WesterWelle Startup Haus, Mombasa',
     blurb: 'Walkthrough on integrating Africa\'s Talking APIs for communication systems.',
     image: 'https://i.ibb.co/9HxnDHXt/buildwithat.jpg',
     link: 'https://africastalking.com',
@@ -98,7 +98,7 @@ export const events = [
   {
     title: 'Unstacked Labs Onboarding',
     date: '2025-09-14',
-    location: 'WesterWelle Startup Haus',
+    location: 'WesterWelle Startup Haus, Mombasa',
     blurb: 'Joined the developer cohort focused on building software utilities backed by AI models.',
     image: 'https://i.ibb.co/y5TD8KW/unstacked2.jpg',
     link: '',

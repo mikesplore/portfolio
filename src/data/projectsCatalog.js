@@ -15,7 +15,7 @@ export const projectsCatalog = [
     title: 'Vela',
     tagline: 'Cross-platform remote device orchestration via natural language',
     summary:
-      'Native Kotlin Android client plus a Flask backend that turns plain-English intents into device actions using LLM function calling.',
+      'Native Kotlin Android client plus a FastAPI backend that turns plain-English intents into device actions using LLM function calling.',
     platform: 'android',
     type: 'problem-solving',
     status: 'source-only',

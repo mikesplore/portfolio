@@ -6,7 +6,7 @@ export const availability = {
 export const status = {
   location: 'Mombasa, Kenya',
   tagline: 'I build and ship apps',
-  focus: 'Python · Kotlin · Android · React',
+  focus: 'Backend · AI · Web · Mobile',
   experience: '3+ years building software',
 };
 
@@ -26,25 +26,29 @@ export const contactSocials = [
   { name: 'Instagram', url: `https://instagram.com/${username}`, handle: username },
   { name: 'Telegram', url: `https://t.me/${username}`, handle: username },
   { name: 'X', url: `https://x.com/${xUsername}`, handle: xUsername },
-  { name: 'WhatsApp', url: 'https://wa.me/254799013845', handle: username },
+  { name: 'WhatsApp', url: `https://wa.me/${username}`, handle: username },
 ];
 
 export const skillsGrouped = [
   {
-    system: 'Backend & APIs',
-    skills: ['Ktor', 'Kotlin', 'Django', 'RESTful APIs'],
+    category: 'Languages',
+    skills: ['Python', 'Kotlin', 'JavaScript'],
   },
   {
-    system: 'Databases & Constraints',
-    skills: ['PostgreSQL', 'Constraint Logic', 'Transaction Management', 'MongoDB'],
+    category: 'Backend & APIs',
+    skills: ['FastAPI', 'Ktor', 'Django', 'RESTful APIs'],
   },
   {
-    system: 'AI Systems',
-    skills: ['Vector Search & RAG', 'LLM Integration', 'Retrieval Pipelines'],
+    category: 'Frontend & Mobile',
+    skills: ['React', 'Vite', 'Jetpack Compose', 'Kotlin Multiplatform'],
   },
   {
-    system: 'Mobile & UI',
-    skills: ['Jetpack Compose', 'React', 'Kotlin Multiplatform'],
+    category: 'DevOps & Systems',
+    skills: ['Docker', 'Linux System Tools', 'systemd', 'nmcli', 'bash'],
+  },
+  {
+    category: 'AI Integration',
+    skills: ['LLM Tool Calling', 'Fireworks AI API', 'Agent Architecture', 'WebSocket Tunnels'],
   },
 ];
 
@@ -60,7 +64,7 @@ export const education = [
 export const hackathons = [
   {
     title: 'OpenAI Build Week',
-    result: 'Submitted',
+    result: 'Not Ranked',
     description: 'Building with Codex and GPT-5.6 for the global OpenAI hackathon sprint.',
     year: '2026',
     organization: 'Online · Devpost',
@@ -68,7 +72,7 @@ export const hackathons = [
   },
   {
     title: 'Build with Gemma - GDG Pwani',
-    result: 'Submitted',
+    result: 'Not Ranked',
     description: 'Gemma 4 hackathon sprint in Mombasa - hands-on with Google DeepMind open models.',
     year: '2026',
     organization: 'GDG Pwani · Mombasa, Kenya',
