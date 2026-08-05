@@ -1,5 +1,17 @@
 export const projectsCatalog = [
   {
+    title: 'Gatekeeperd',
+    tagline: 'Payment gating engine for client projects hosted on your VPS',
+    summary:
+      'Payment gating engine for client projects hosted on your VPS. Gatekeeperd sits behind your reverse proxy (nginx or Traefik), decides whether traffic reaches a client app, and shows a self-service Paystack paywall when a project is suspended.',
+    platform: 'tooling',
+    type: 'problem-solving',
+    status: 'live',
+    github: 'https://github.com/mikesplore/gatekeeperd',
+    liveDemo: 'https://gatekeeperd.mikesplore.me',
+    image: 'https://placehold.co/1200x630/0f766e/ccfbf1?text=Gatekeeperd',
+  },
+  {
     title: 'Vela',
     tagline: 'Cross-platform remote device orchestration via natural language',
     summary:

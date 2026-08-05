@@ -1,5 +1,12 @@
 export const events = [
-  
+  {
+    title: 'Google I/O Extended Pwani',
+    date: '2026-08-01',
+    location: 'Westerwelle Startup Haus',
+    blurb: 'Attended Google I/O Extended Pwani - sessions on the latest Google ecosystem updates, AI tools, and developer platforms.',
+    image: 'https://i.ibb.co/ccK8dWKF/Screenshot-From-2026-08-05-17-11-37.png',
+    link: '',
+  },
   {
     title: 'Cursor Mombasa Meetup',
     date: '2026-07-12',

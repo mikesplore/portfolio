@@ -60,7 +60,7 @@ export const education = [
 export const hackathons = [
   {
     title: 'OpenAI Build Week',
-    result: 'Participating',
+    result: 'Submitted',
     description: 'Building with Codex and GPT-5.6 for the global OpenAI hackathon sprint.',
     year: '2026',
     organization: 'Online · Devpost',
@@ -68,7 +68,7 @@ export const hackathons = [
   },
   {
     title: 'Build with Gemma - GDG Pwani',
-    result: 'Participating',
+    result: 'Submitted',
     description: 'Gemma 4 hackathon sprint in Mombasa - hands-on with Google DeepMind open models.',
     year: '2026',
     organization: 'GDG Pwani · Mombasa, Kenya',
