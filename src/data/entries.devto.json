@@ -1,9 +1,21 @@
 [
   {
+    "date": "2026-08-08",
+    "type": "articles",
+    "title": "Why I Built an MCP Server (And Why You Should Too)",
+    "blurb": "I needed a way to interact with my app through AI clients without locking myself into a single...",
+    "link": "https://dev.to/mikesplore/why-i-built-an-mcp-server-and-why-you-should-too-2760",
+    "tags": [
+      "mcp",
+      "ai",
+      "llm"
+    ]
+  },
+  {
     "date": "2026-08-05",
     "type": "articles",
     "title": "I Built a Self-Hosted Platform That Deploys Client Apps and Gates Them Behind a Paywall When They Don't Pay",
-    "blurb": "I built a self-hosted deployment platform that automatically deploys Docker apps, provisions nginx...",
+    "blurb": "I built a self-hosted deployment platform that automatically deploys Docker apps, provisions…",
     "link": "https://dev.to/mikesplore/i-built-a-self-hosted-platform-that-deploys-client-apps-and-gates-them-behind-a-paywall-when-they-30ke",
     "tags": [
       "kotlin",
