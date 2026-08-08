@@ -1,5 +1,17 @@
 export const projectsCatalog = [
   {
+    title: 'Vela MCP Server',
+    tagline: 'MCP server exposing Vela RemotePC endpoints as tools for AI clients',
+    summary:
+      'MCP (Model Context Protocol) server that exposes Vela RemotePC endpoints as tools, so AI clients (Claude Desktop, Cline, Cursor, Gemini, etc.) can control remote systems. Supports STDIO (single-tenant) and HTTP (multi-tenant) transports sharing 150+ tool definitions.',
+    platform: 'tooling',
+    type: 'problem-solving',
+    status: 'source-only',
+    github: 'https://github.com/mikesplore/vela-mcp',
+    liveDemo: '',
+    image: 'https://placehold.co/1200x630/0e7490/cffafe?text=Vela+MCP+Server',
+  },
+  {
     title: 'Gatekeeperd',
     tagline: 'Payment gating engine for client projects hosted on your VPS',
     summary:
@@ -22,18 +34,6 @@ export const projectsCatalog = [
     github: 'https://github.com/mikesplore/vela',
     liveDemo: '',
     image: 'https://placehold.co/1200x630/1c1917/f5f5f4?text=Vela+Project',
-  },
-  {
-    title: 'Vela MCP Server',
-    tagline: 'MCP server exposing Vela RemotePC endpoints as tools for AI clients',
-    summary:
-      'MCP (Model Context Protocol) server that exposes Vela RemotePC endpoints as tools, so AI clients (Claude Desktop, Cline, Cursor, Gemini, etc.) can control remote systems. Supports STDIO (single-tenant) and HTTP (multi-tenant) transports sharing 150+ tool definitions.',
-    platform: 'tooling',
-    type: 'problem-solving',
-    status: 'source-only',
-    github: 'https://github.com/mikesplore/vela-mcp',
-    liveDemo: '',
-    image: 'https://placehold.co/1200x630/0e7490/cffafe?text=Vela+MCP+Server',
   },
   {
     title: 'Tessera',
